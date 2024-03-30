@@ -1,5 +1,4 @@
 # FreeCAD SheetMetal Workbench
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/shaise/FreeCAD_SheetMetal.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/shaise/FreeCAD_SheetMetal/alerts/) [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/shaise/FreeCAD_SheetMetal.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/shaise/FreeCAD_SheetMetal/context:python)  
 
 A simple sheet metal tools workbench for FreeCAD
 
@@ -100,6 +99,10 @@ Starting from FreeCAD 0.17 it can be installed via the [Addon Manager](https://g
 * FreeCAD Forum announcement/discussion [thread](https://forum.freecadweb.org/viewtopic.php?f=3&t=60818) 
 
 #### Release notes: 
+* V0.4.09 28 Mar 2024:  Enhance bend function to work on refined faces as well.  
+* V0.4.08 27 Mar 2024:  Add option to set origin of base shape.  
+* V0.4.07 26 Mar 2024:  Fix Translation issues by [@hasecilu][hasecilu].  
+                      - Update function names to match the wiki help by [@hasecilu][hasecilu].  
 * V0.4.06 22 Mar 2024:  Fix SolidBend function to be more robust and autodetect thickness.  
                       - Fix issues with auto-miter not working in some cases.  
 * V0.4.05 20 Mar 2024:  Update all other sheetmetal icons by [@maxwxyz][maxwxyz].  

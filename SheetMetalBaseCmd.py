@@ -39,7 +39,9 @@ Gui.updateLocale()
 
 def smWarnDialog(msg):
     diag = QtGui.QMessageBox(
-        QtGui.QMessageBox.Warning, "Error in macro MessageBox", msg
+        QtGui.QMessageBox.Warning,
+        FreeCAD.Qt.translate("QMessageBox", "Error in macro MessageBox"),
+        msg,
     )
     diag.setWindowModality(QtCore.Qt.ApplicationModal)
     diag.exec_()
@@ -62,7 +64,12 @@ def smIsOperationLegal(body, selobj):
     # FreeCAD.Console.PrintLog(str(selobj) + " " + str(body) + " " + str(smBelongToBody(selobj, body)) + "\n")
     if smIsSketchObject(selobj) and not smBelongToBody(selobj, body):
         smWarnDialog(
-            "The selected geometry does not belong to the active Body.\nPlease make the container of this item active by\ndouble clicking on it."
+            FreeCAD.Qt.translate(
+                "QMessageBox",
+                "The selected geometry does not belong to the active Body.\n"
+                "Please make the container of this item active by\n"
+                "double clicking on it.",
+            )
         )
         return False
     return True
@@ -73,7 +80,7 @@ def GetViewConfig(obj):
     viewconf["objShapeCol"] = obj.ViewObject.ShapeColor
     viewconf["objShapeTsp"] = obj.ViewObject.Transparency
     viewconf["objDiffuseCol"] = obj.ViewObject.DiffuseColor
-    # TODO Make the individual face colors be retained
+    # TODO: Make the individual face colors be retained
     # needDiffuseColorExtension = ( len(selobj.ViewObject.DiffuseColor) < len(selobj.Shape.Faces) )
     return viewconf
 
@@ -356,4 +363,4 @@ class AddBaseCommandClass:
         return True
 
 
-Gui.addCommand("SMBase", AddBaseCommandClass())
+Gui.addCommand("SheetMetal_AddBase", AddBaseCommandClass())
