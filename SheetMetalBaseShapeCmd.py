@@ -38,7 +38,7 @@ mw = FreeCADGui.getMainWindow()
 # changes in modeling logic
 smElementMapVersion = 'sm1.'
 
-base_shape_types = ["L-Shape", "U-Shape", "Tub", "Hat", "Box"]
+base_shape_types = ["Flat", "L-Shape", "U-Shape", "Tub", "Hat", "Box"]
 origin_location_types = ["-X,-Y", "-X,0", "-X,+Y", "0,-Y", "0,0", "0,+Y", "+X,-Y", "+X,0", "+X,+Y"]
 
 ##########################################################################################################
@@ -73,11 +73,16 @@ class BaseShapeTaskPanel:
         self.form.bFlangeWidthSpin.valueChanged.connect(self.spinValChanged)
         self.form.bLengthSpin.valueChanged.connect(self.spinValChanged)
         self.form.shapeType.currentIndexChanged.connect(self.typeChanged)
-        self.form.originLoc.currentIndexChanged.connect(self.typeChanged)
+        self.form.originLoc.currentIndexChanged.connect(self.spinValChanged)
         self.form.chkFillGaps.stateChanged.connect(self.checkChanged)
         self.form.update()
 
         #SMLogger.log(str(self.formReady) + " <2 \n")
+    def updateEnableState(self):
+        type = base_shape_types[self.form.shapeType.currentIndex()]
+        self.form.bFlangeWidthSpin.setEnabled(type in ["Hat", "Box"])
+        self.form.bRadiusSpin.setEnabled(not type == "Flat")
+        self.form.bHeightSpin.setEnabled(not type == "Flat")
 
     def spinValChanged(self):
         if not self.formReady:
@@ -86,6 +91,7 @@ class BaseShapeTaskPanel:
         self.obj.recompute()
 
     def typeChanged(self):
+        self.updateEnableState()
         self.spinValChanged()
 
     def checkChanged(self):
@@ -179,9 +185,11 @@ def smCreateBaseShape(type, thickness, radius, width, length, height, flangeWidt
         width -= 2.0 * bendCompensation
         length -= 2.0 * bendCompensation
         compx = compy = bendCompensation
-    else:
+    elif type == "L-Shape":
         numfolds = 1
         width -= bendCompensation
+    else:
+        numfolds = 0
     if type in ["Hat", "Box"]:
         height -= bendCompensation
         flangeWidth -= radius
@@ -194,8 +202,10 @@ def smCreateBaseShape(type, thickness, radius, width, length, height, flangeWidt
     offsy = GetOriginShift(width, originY, compy)
     if type == "L-Shape" and originY == "+Y":
         offsy -= bendCompensation
-    box = Part.makeBox(length, width, thickness)
-    box.translate(FreeCAD.Vector(offsx, offsy, 0))
+    box = Part.makeBox(length, width, thickness, FreeCAD.Vector(offsx, offsy, 0))
+    #box.translate(FreeCAD.Vector(offsx, offsy, 0))
+    if numfolds == 0:
+        return box
     faces = []
     for i in range(len(box.Faces)):
         v = box.Faces[i].normalAt(0,0)
@@ -219,10 +229,6 @@ def smCreateBaseShape(type, thickness, radius, width, length, height, flangeWidt
         shape, f = smBend(thickness, selFaceNames = faces, extLen = flangeWidth,
                           bendR = radius, MainObject = shape, flipped = invertBend,
                           automiter = fillGaps)
-
-
-
-
     #SMLogger.message(str(faces))
     return shape
 
@@ -343,6 +349,7 @@ class SMBaseShape:
             "shapeType",
             FreeCAD.Qt.translate("SMBaseShape", "Base shape type", "Property"),
             base_shape_types,
+            defval = "L-Shape"
         )
         smAddEnumProperty(
             obj,
