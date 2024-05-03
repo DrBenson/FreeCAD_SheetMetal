@@ -76,21 +76,24 @@ def smIsOperationLegal(body, selobj):
 
 
 def GetViewConfig(obj):
-    return obj.ViewObject.dumpContent()
     viewconf = {}
-    viewconf["objShapeCol"] = obj.ViewObject.ShapeColor
-    viewconf["objShapeTsp"] = obj.ViewObject.Transparency
-    viewconf["objDiffuseCol"] = obj.ViewObject.DiffuseColor
-    # TODO: Make the individual face colors be retained
-    # needDiffuseColorExtension = ( len(selobj.ViewObject.DiffuseColor) < len(selobj.Shape.Faces) )
+    if hasattr(obj.ViewObject, "ShapeColor"):
+        viewconf["objShapeCol"] = obj.ViewObject.ShapeColor
+        viewconf["objShapeTsp"] = obj.ViewObject.Transparency
+        viewconf["objDiffuseCol"] = obj.ViewObject.DiffuseColor
+        # TODO: Make the individual face colors be retained
+        # needDiffuseColorExtension = ( len(selobj.ViewObject.DiffuseColor) < len(selobj.Shape.Faces) )
     return viewconf
+    #return obj.ViewObject.dumpContent()
 
 
 def SetViewConfig(obj, viewconf):
-    obj.ViewObject.restoreContent(viewconf)
-    #obj.ViewObject.ShapeColor = viewconf["objShapeCol"]
-    #obj.ViewObject.Transparency = viewconf["objShapeTsp"]
-    #obj.ViewObject.DiffuseColor = viewconf["objDiffuseCol"]
+    if hasattr(obj.ViewObject, "ShapeColor"):
+        obj.ViewObject.ShapeColor = viewconf["objShapeCol"]
+        obj.ViewObject.Transparency = viewconf["objShapeTsp"]
+        obj.ViewObject.DiffuseColor = viewconf["objDiffuseCol"]
+    #obj.ViewObject.restoreContent(viewconf)
+
 
 
 def getOriginalBendObject(obj):
@@ -302,7 +305,7 @@ class SMBaseViewProvider:
 
     def claimChildren(self):
         objs = []
-        if hasattr(self.Object, "BendSketch"):
+        if hasattr(self, "Object") and hasattr(self.Object, "BendSketch"):
             objs.append(self.Object.BendSketch)
         return objs
 
