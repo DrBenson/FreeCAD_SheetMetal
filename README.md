@@ -99,15 +99,20 @@ Starting from FreeCAD 0.17 it can be installed via the [Addon Manager](https://g
 * FreeCAD Forum announcement/discussion [thread](https://forum.freecadweb.org/viewtopic.php?f=3&t=60818) 
 
 #### Release notes:
-* V0.4.23 17 Jul 2024:  Fix bug with zero length walls.
-* V0.4.22 08 Jul 2024:  Eliminate temporary errors when base shape fields are edited.
-* V0.4.21 30 Jun 2024:  Fix Form tool not working.
-* V0.4.20 24 Jun 2024:  Change origin selection methos in base shape gui.
-* V0.4.19 22 Jun 2024:  Update icon colors in base shape gui.
-* V0.4.18 08 Jun 2024:  Yet more TNP issues.
-* V0.4.17 04 Jun 2024:  Temporary bypass TNP problem for other commands.
-* V0.4.16 01 Jun 2024:  Temporary bypass TNP problem.
-* V0.4.15 29 May 2024:  Disable fold and extend icons when a sketch is selected.
+* V0.4.26 18 Sep 2024:  Add bend perforation support [@Erhannis][Erhannis].  
+                      - Make TRANSLATION.md clearer by [@luzpaz]luzpaz.  
+* V0.4.25 09 Sep 2024:  Comment-out debug line by [@Roy-043][Roy-043].  
+                      - Fix Bend on sketch bug by [@jaisejames][jaisejames].  
+* V0.4.24 09 Aug 2024:  Support linked and cloned objects in Fold On Sketch.  
+* V0.4.23 17 Jul 2024:  Fix bug with zero length walls.  
+* V0.4.22 08 Jul 2024:  Eliminate temporary errors when base shape fields are edited.  
+* V0.4.21 30 Jun 2024:  Fix Form tool not working.  
+* V0.4.20 24 Jun 2024:  Change origin selection methos in base shape gui.  
+* V0.4.19 22 Jun 2024:  Update icon colors in base shape gui.  
+* V0.4.18 08 Jun 2024:  Yet more TNP issues.  
+* V0.4.17 04 Jun 2024:  Temporary bypass TNP problem for other commands.  
+* V0.4.16 01 Jun 2024:  Temporary bypass TNP problem.  
+* V0.4.15 29 May 2024:  Disable fold and extend icons when a sketch is selected.  
                       - Make unused parameters readonly when are not used by [@hasecilu][hasecilu].  
                       - GUI translation update from Crowdin by [@kaktusus][kaktusus].  
 * V0.4.14 13 May 2024:  Add Italian translations by [@robbeban][robbeban].  
@@ -246,6 +251,7 @@ Starting from FreeCAD 0.17 it can be installed via the [Addon Manager](https://g
 [pierreporte]: https://github.com/pierreporte
 [free777cat]: https://github.com/free777cat
 [YakoYakoYokuYoku]: https://github.com/YakoYakoYokuYoku
+[Erhannis]: https://github.com/Erhannis
 [robbeban]https://github.com/robbeban/FreeCAD_SheetMetal/tree/master
 [topic82482]: https://forum.freecad.org/viewtopic.php?t=82482
 [30]: https://github.com/shaise/FreeCAD_SheetMetal/issues/30
