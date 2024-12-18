@@ -1,44 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="zh_TW" sourcelanguage="en_US">
+    <extra-po-header-language>zh_TW</extra-po-header-language>
+    <extra-po-header-language_team></extra-po-header-language_team>
+    <extra-po-header-last_translator>DrBenson &lt;Benson.Dr@GMail.com&gt;</extra-po-header-last_translator>
+    <extra-po-header-po_revision_date></extra-po-header-po_revision_date>
+    <extra-po-header-pot_creation_date></extra-po-header-pot_creation_date>
+    <extra-po-header-project_id_version>FreeCAD SheetMetal Language Translations.</extra-po-header-project_id_version>
+    <extra-po-header-x_generator>Poedit 3.2.2</extra-po-header-x_generator>
+    <extra-po-header_comment>#
+# Translators:
+# DrBenson &lt;Benson.Dr@GMail.com&gt;, 2024
+#
+    </extra-po-header_comment>
+    <extra-po-headers>Project-Id-Version,POT-Creation-Date,PO-Revision-Date,Last-Translator,Language-Team,Language,MIME-Version,Content-Type,Content-Transfer-Encoding,Plural-Forms,X-Language,X-Source-Language,X-Qt-Contexts,X-Generator</extra-po-headers>
 <context>
     <name>Gui::Dialog::DlgSettingsSheetMetal</name>
     <message>
         <location filename="../panels/SMprefs.ui" line="14"/>
         <source>General settings</source>
-        <translation type="unfinished"></translation>
+        <translation>一般設定</translation>
     </message>
     <message>
         <location filename="../panels/SMprefs.ui" line="26"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>一般</translation>
     </message>
     <message>
         <location filename="../panels/SMprefs.ui" line="37"/>
         <source>Engineering UX Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>工程 UX 模式</translation>
     </message>
     <message>
         <location filename="../panels/SMprefs.ui" line="70"/>
         <location filename="../panels/SMprefs.ui" line="123"/>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>停用</translation>
     </message>
     <message>
         <location filename="../panels/SMprefs.ui" line="75"/>
         <location filename="../panels/SMprefs.ui" line="128"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>啟用</translation>
     </message>
     <message>
         <location filename="../panels/SMprefs.ui" line="90"/>
         <source>Auto Link Bend Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>自動連結彎曲半徑</translation>
     </message>
     <message>
         <location filename="../panels/SMprefs.ui" line="171"/>
         <source>Preferences for the SheetMetal Workbench</source>
-        <translation type="unfinished"></translation>
+        <translation>鈑金工作台 偏好設定</translation>
     </message>
 </context>
 <context>
@@ -46,165 +59,175 @@
     <message>
         <location filename="../panels/AddJunctionPanel.ui" line="14"/>
         <source>Add Junction Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>新增結點參數</translation>
     </message>
     <message>
         <location filename="../panels/AddJunctionPanel.ui" line="25"/>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>選擇</translation>
     </message>
     <message>
         <location filename="../panels/AddJunctionPanel.ui" line="63"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location filename="../panels/AddJunctionPanel.ui" line="68"/>
         <source>SubElement</source>
-        <translation type="unfinished"></translation>
+        <translation>子元件</translation>
     </message>
     <message>
         <location filename="../panels/AddJunctionPanel.ui" line="76"/>
         <source>Extend</source>
-        <translation type="unfinished"></translation>
+        <translation>延伸</translation>
     </message>
     <message>
         <location filename="../panels/AddJunctionPanel.ui" line="95"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>寬度</translation>
     </message>
     <message>
         <location filename="../panels/AddJunctionPanel.ui" line="115"/>
         <source>Refine</source>
-        <translation type="unfinished"></translation>
+        <translation>細緻化</translation>
     </message>
 </context>
 <context>
     <name>SMBaseShapeTaskPanel</name>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="14"/>
+        <location filename="../BaseShapeOptions.ui" line="14"/>
         <source>Generate Sheet Metal base shape</source>
-        <translation type="unfinished"></translation>
+        <translation>產生鈑金工作台基礎形狀</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="22"/>
+        <location filename="../BaseShapeOptions.ui" line="22"/>
         <source>Base shape type</source>
-        <translation type="unfinished"></translation>
+        <translation>基礎形狀類型</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="61"/>
+        <location filename="../BaseShapeOptions.ui" line="61"/>
         <source>Flat</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="66"/>
+        <location filename="../BaseShapeOptions.ui" line="66"/>
         <source>L-Shape</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="71"/>
+        <location filename="../BaseShapeOptions.ui" line="71"/>
         <source>U-Shape</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="76"/>
+        <location filename="../BaseShapeOptions.ui" line="76"/>
         <source>Tub</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="81"/>
+        <location filename="../BaseShapeOptions.ui" line="81"/>
         <source>Hat</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="86"/>
+        <location filename="../BaseShapeOptions.ui" line="86"/>
         <source>Box</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="98"/>
+        <location filename="../BaseShapeOptions.ui" line="98"/>
         <source>Thickness</source>
-        <translation type="unfinished"></translation>
+        <translation>厚度</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="136"/>
+        <location filename="../BaseShapeOptions.ui" line="136"/>
         <source>Thickness of sheet</source>
-        <translation type="unfinished"></translation>
+        <translation>鈑金厚度</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="162"/>
+        <location filename="../BaseShapeOptions.ui" line="162"/>
         <source>Bend radius</source>
-        <translation type="unfinished"></translation>
+        <translation>彎曲半徑</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="200"/>
+        <location filename="../BaseShapeOptions.ui" line="200"/>
         <source>Inner radius of the bend</source>
-        <translation type="unfinished"></translation>
+        <translation>彎曲內半徑</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="226"/>
+        <location filename="../BaseShapeOptions.ui" line="226"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>寬度</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="264"/>
+        <location filename="../BaseShapeOptions.ui" line="264"/>
         <source>Width of base shape</source>
-        <translation type="unfinished"></translation>
+        <translation>基座形狀的寬度</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="287"/>
+        <location filename="../BaseShapeOptions.ui" line="287"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>長度</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="328"/>
+        <location filename="../BaseShapeOptions.ui" line="328"/>
         <source>Length of base shape</source>
-        <translation type="unfinished"></translation>
+        <translation>基座形狀的長度</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="354"/>
+        <location filename="../BaseShapeOptions.ui" line="354"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>高度</translation>
+    </message>
+    <message>
+        <location filename="../BaseShapeOptions.ui" line="386"/>
+        <source>height of base shape</source>
+        <translation>基座形狀的高度</translation>
+    </message>
+    <message>
+        <location filename="../BaseShapeOptions.ui" line="520"/>
+        <source>Top view</source>
+        <translation>上視圖</translation>
     </message>
     <message>
         <location filename="../panels/BaseShapeOptions.ui" line="386"/>
         <source>Height of base shape</source>
-        <translation type="unfinished"></translation>
+        <translation>基座形狀的高度</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="415"/>
+        <location filename="../BaseShapeOptions.ui" line="415"/>
         <source>Flange width</source>
-        <translation type="unfinished"></translation>
+        <translation>法蘭寬度</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="447"/>
+        <location filename="../BaseShapeOptions.ui" line="447"/>
         <source>Width of top flange (for Box and Hat types)</source>
-        <translation type="unfinished"></translation>
+        <translation>頂部凸緣寬度(適用於立方型和帽型)</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="482"/>
+        <location filename="../BaseShapeOptions.ui" line="482"/>
         <source>Location of part origin</source>
-        <translation type="unfinished"></translation>
+        <translation>零件原點</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="874"/>
+        <location filename="../BaseShapeOptions.ui" line="619"/>
         <source>Extend sides and flange to close all gaps</source>
-        <translation type="unfinished"></translation>
+        <translation>延伸側面和凸緣以封閉所有間隙</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="877"/>
+        <location filename="../BaseShapeOptions.ui" line="622"/>
         <source>Fill gaps</source>
-        <translation type="unfinished"></translation>
+        <translation>填充間隙</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="884"/>
+        <location filename="../BaseShapeOptions.ui" line="629"/>
         <source>Create the base shape as a new body</source>
-        <translation type="unfinished"></translation>
+        <translation>建立基礎形狀作為新實體</translation>
     </message>
     <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="887"/>
+        <location filename="../BaseShapeOptions.ui" line="632"/>
         <source>Embed in new Body</source>
-        <translation type="unfinished"></translation>
+        <translation>嵌入新實體</translation>
     </message>
 </context>
 <context>
@@ -212,37 +235,37 @@
     <message>
         <location filename="../panels/BendCornerPanel.ui" line="14"/>
         <source>Bend sharp corner Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>折彎尖角參數</translation>
     </message>
     <message>
         <location filename="../panels/BendCornerPanel.ui" line="25"/>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>選擇</translation>
     </message>
     <message>
         <location filename="../panels/BendCornerPanel.ui" line="63"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location filename="../panels/BendCornerPanel.ui" line="68"/>
         <source>SubElement</source>
-        <translation type="unfinished"></translation>
+        <translation>子元件</translation>
     </message>
     <message>
         <location filename="../panels/BendCornerPanel.ui" line="76"/>
         <source>Extend</source>
-        <translation type="unfinished"></translation>
+        <translation>延伸</translation>
     </message>
     <message>
         <location filename="../panels/BendCornerPanel.ui" line="95"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>半徑</translation>
     </message>
     <message>
         <location filename="../panels/BendCornerPanel.ui" line="115"/>
         <source>Refine</source>
-        <translation type="unfinished"></translation>
+        <translation>細緻化</translation>
     </message>
 </context>
 <context>
@@ -250,37 +273,37 @@
     <message>
         <location filename="../panels/BendOnLinePanel.ui" line="14"/>
         <source>Fold on sketch line parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>折疊草圖線參數</translation>
     </message>
     <message>
         <location filename="../panels/BendOnLinePanel.ui" line="43"/>
         <source>Base Object</source>
-        <translation type="unfinished"></translation>
+        <translation>基礎物體</translation>
     </message>
     <message>
         <location filename="../panels/BendOnLinePanel.ui" line="53"/>
         <source>Bend Line</source>
-        <translation type="unfinished"></translation>
+        <translation>彎折線</translation>
     </message>
     <message>
         <location filename="../panels/BendOnLinePanel.ui" line="68"/>
         <source>Flip Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>翻轉方向</translation>
     </message>
     <message>
         <location filename="../panels/BendOnLinePanel.ui" line="75"/>
         <source>Unbend</source>
-        <translation type="unfinished"></translation>
+        <translation>伸直</translation>
     </message>
     <message>
         <location filename="../panels/BendOnLinePanel.ui" line="87"/>
         <source>Bend Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>彎曲半徑</translation>
     </message>
     <message>
         <location filename="../panels/BendOnLinePanel.ui" line="100"/>
         <source>Bend Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>彎曲角度</translation>
     </message>
 </context>
 <context>
@@ -288,79 +311,79 @@
     <message>
         <location filename="../panels/CornerReliefPanel.ui" line="14"/>
         <source>Generate Sheet Metal base shape</source>
-        <translation type="unfinished"></translation>
+        <translation>產生鈑金工作台基礎形狀</translation>
     </message>
     <message>
         <location filename="../panels/CornerReliefPanel.ui" line="25"/>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>選擇</translation>
     </message>
     <message>
         <location filename="../panels/CornerReliefPanel.ui" line="69"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location filename="../panels/CornerReliefPanel.ui" line="74"/>
         <source>SubElement</source>
-        <translation type="unfinished"></translation>
+        <translation>子元件</translation>
     </message>
     <message>
         <location filename="../panels/CornerReliefPanel.ui" line="88"/>
         <source>Relief Type</source>
-        <translation type="unfinished"></translation>
+        <translation>減免類型</translation>
     </message>
     <message>
         <location filename="../panels/CornerReliefPanel.ui" line="96"/>
         <source>Circular</source>
-        <translation type="unfinished"></translation>
+        <translation>環形</translation>
     </message>
     <message>
         <location filename="../panels/CornerReliefPanel.ui" line="109"/>
         <source>Square</source>
-        <translation type="unfinished"></translation>
+        <translation>正方形</translation>
     </message>
     <message>
         <location filename="../panels/CornerReliefPanel.ui" line="119"/>
         <location filename="../panels/CornerReliefPanel.ui" line="152"/>
         <source>Sketch</source>
-        <translation type="unfinished"></translation>
+        <translation>草圖</translation>
     </message>
     <message>
         <location filename="../panels/CornerReliefPanel.ui" line="171"/>
         <source>X Offset</source>
-        <translation type="unfinished"></translation>
+        <translation>X 偏移量</translation>
     </message>
     <message>
         <location filename="../panels/CornerReliefPanel.ui" line="194"/>
         <source>Y Offset</source>
-        <translation type="unfinished"></translation>
+        <translation>Y 偏移量</translation>
     </message>
     <message>
         <location filename="../panels/CornerReliefPanel.ui" line="223"/>
         <location filename="../panels/CornerReliefPanel.ui" line="280"/>
         <source>Relief Size</source>
-        <translation type="unfinished"></translation>
+        <translation>減免大小</translation>
     </message>
     <message>
         <location filename="../panels/CornerReliefPanel.ui" line="231"/>
         <source>Absolute</source>
-        <translation type="unfinished"></translation>
+        <translation>絕對</translation>
     </message>
     <message>
         <location filename="../panels/CornerReliefPanel.ui" line="241"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation>相對關係</translation>
     </message>
     <message>
         <location filename="../panels/CornerReliefPanel.ui" line="321"/>
         <source>Scale Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>縮放係數</translation>
     </message>
     <message>
         <location filename="../panels/CornerReliefPanel.ui" line="343"/>
         <source>K Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>K-係數</translation>
     </message>
 </context>
 <context>
@@ -368,77 +391,77 @@
     <message>
         <location filename="../panels/CreateBaseShape.ui" line="20"/>
         <source>Generate Sheet Metal base shape</source>
-        <translation type="unfinished"></translation>
+        <translation>產生鈑金工作台基礎形狀</translation>
     </message>
     <message>
         <location filename="../panels/CreateBaseShape.ui" line="28"/>
         <source>Sketch</source>
-        <translation type="unfinished"></translation>
+        <translation>草圖</translation>
     </message>
     <message>
         <location filename="../panels/CreateBaseShape.ui" line="46"/>
         <source>Bend Options</source>
-        <translation type="unfinished"></translation>
+        <translation>彎曲選項</translation>
     </message>
     <message>
         <location filename="../panels/CreateBaseShape.ui" line="52"/>
         <source>Bend Plane</source>
-        <translation type="unfinished"></translation>
+        <translation>彎曲平面</translation>
     </message>
     <message>
         <location filename="../panels/CreateBaseShape.ui" line="85"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>半徑</translation>
     </message>
     <message>
         <location filename="../panels/CreateBaseShape.ui" line="98"/>
         <source>Thickness</source>
-        <translation type="unfinished"></translation>
+        <translation>厚度</translation>
     </message>
     <message>
         <location filename="../panels/CreateBaseShape.ui" line="112"/>
         <source>Outside</source>
-        <translation type="unfinished"></translation>
+        <translation>外部對齊</translation>
     </message>
     <message>
         <location filename="../panels/CreateBaseShape.ui" line="117"/>
         <source>Inside</source>
-        <translation type="unfinished"></translation>
+        <translation>內部對齊</translation>
     </message>
     <message>
         <location filename="../panels/CreateBaseShape.ui" line="122"/>
         <source>Centered</source>
-        <translation type="unfinished"></translation>
+        <translation>中心對齊</translation>
     </message>
     <message>
         <location filename="../panels/CreateBaseShape.ui" line="139"/>
         <source>Extrude options</source>
-        <translation type="unfinished"></translation>
+        <translation>擠壓選項</translation>
     </message>
     <message>
         <location filename="../panels/CreateBaseShape.ui" line="151"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>間距</translation>
     </message>
     <message>
         <location filename="../panels/CreateBaseShape.ui" line="168"/>
         <source>Create the base shape as a new body</source>
-        <translation type="unfinished"></translation>
+        <translation>建立基礎形狀作為新主體</translation>
     </message>
     <message>
         <location filename="../panels/CreateBaseShape.ui" line="171"/>
         <source>Symmetric</source>
-        <translation type="unfinished"></translation>
+        <translation>對稱</translation>
     </message>
     <message>
         <location filename="../panels/CreateBaseShape.ui" line="178"/>
         <source>Extend sides and flange to close all gaps</source>
-        <translation type="unfinished"></translation>
+        <translation>延伸側面和凸緣以封閉所有間隙</translation>
     </message>
     <message>
         <location filename="../panels/CreateBaseShape.ui" line="181"/>
         <source>Reverse Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>反轉方向</translation>
     </message>
 </context>
 <context>
@@ -446,47 +469,47 @@
     <message>
         <location filename="../panels/ExtendTaskPanel.ui" line="14"/>
         <source>Extend Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>延伸參數</translation>
     </message>
     <message>
         <location filename="../panels/ExtendTaskPanel.ui" line="25"/>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>選擇</translation>
     </message>
     <message>
         <location filename="../panels/ExtendTaskPanel.ui" line="63"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location filename="../panels/ExtendTaskPanel.ui" line="68"/>
         <source>SubElement</source>
-        <translation type="unfinished"></translation>
+        <translation>子元件</translation>
     </message>
     <message>
         <location filename="../panels/ExtendTaskPanel.ui" line="76"/>
         <source>Extend</source>
-        <translation type="unfinished"></translation>
+        <translation>延伸</translation>
     </message>
     <message>
         <location filename="../panels/ExtendTaskPanel.ui" line="112"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>長度</translation>
     </message>
     <message>
         <location filename="../panels/ExtendTaskPanel.ui" line="119"/>
         <source>Offset A</source>
-        <translation type="unfinished"></translation>
+        <translation>偏移 A</translation>
     </message>
     <message>
         <location filename="../panels/ExtendTaskPanel.ui" line="132"/>
         <source>Offset B</source>
-        <translation type="unfinished"></translation>
+        <translation>偏移 B</translation>
     </message>
     <message>
         <location filename="../panels/ExtendTaskPanel.ui" line="146"/>
         <source>Refine</source>
-        <translation type="unfinished"></translation>
+        <translation>細緻化</translation>
     </message>
 </context>
 <context>
@@ -494,92 +517,92 @@
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="20"/>
         <source>Extruded Cutout Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>擠壓切口參數</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="32"/>
         <source>Base Features</source>
-        <translation type="unfinished"></translation>
+        <translation>基礎特徵</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="62"/>
         <source>Sketch</source>
-        <translation type="unfinished"></translation>
+        <translation>草圖</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="72"/>
         <source>Face</source>
-        <translation type="unfinished"></translation>
+        <translation>面</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="94"/>
         <source>Cutout Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>切割參數</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="102"/>
         <source>Inside</source>
-        <translation type="unfinished"></translation>
+        <translation>內部對齊</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="112"/>
         <source>Outside</source>
-        <translation type="unfinished"></translation>
+        <translation>外部對齊</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="126"/>
         <source>Cutout Type</source>
-        <translation type="unfinished"></translation>
+        <translation>切割類型</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="140"/>
         <source>Two Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>雙向填充</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="145"/>
         <source>Symmetric</source>
-        <translation type="unfinished"></translation>
+        <translation>對稱</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="150"/>
         <source>Through All Both Sides</source>
-        <translation type="unfinished"></translation>
+        <translation>兩側完全貫穿</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="155"/>
         <source>Through All Side A</source>
-        <translation type="unfinished"></translation>
+        <translation>完全貫穿側面 A</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="160"/>
         <source>Through All Side B</source>
-        <translation type="unfinished"></translation>
+        <translation>完全貫穿側面 B</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="197"/>
         <source>Side A Length</source>
-        <translation type="unfinished"></translation>
+        <translation>側面A長度</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="238"/>
         <source>Side B Length</source>
-        <translation type="unfinished"></translation>
+        <translation>側面B長度</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="258"/>
         <source>Improve Cutout (Slow)</source>
-        <translation type="unfinished"></translation>
+        <translation>改善剪切 (緩慢)</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="286"/>
         <source>Improve Level</source>
-        <translation type="unfinished"></translation>
+        <translation>改善層級</translation>
     </message>
     <message>
         <location filename="../panels/ExtrudedCutoutPanel.ui" line="315"/>
         <source>Refine</source>
-        <translation type="unfinished"></translation>
+        <translation>細緻化</translation>
     </message>
 </context>
 <context>
@@ -587,67 +610,67 @@
     <message>
         <location filename="../panels/FlangeAdvancedParameters.ui" line="14"/>
         <source>Advanced Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>進階參數</translation>
     </message>
     <message>
         <location filename="../panels/FlangeAdvancedParameters.ui" line="20"/>
         <source>Relief Cuts</source>
-        <translation type="unfinished"></translation>
+        <translation>減免削減</translation>
     </message>
     <message>
         <location filename="../panels/FlangeAdvancedParameters.ui" line="26"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>寬度</translation>
     </message>
     <message>
         <location filename="../panels/FlangeAdvancedParameters.ui" line="39"/>
         <source>Depth</source>
-        <translation type="unfinished"></translation>
+        <translation>深度</translation>
     </message>
     <message>
         <location filename="../panels/FlangeAdvancedParameters.ui" line="56"/>
         <source>mm</source>
-        <translation type="unfinished"></translation>
+        <translation>mm</translation>
     </message>
     <message>
         <location filename="../panels/FlangeAdvancedParameters.ui" line="71"/>
         <source>Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>矩形</translation>
     </message>
     <message>
         <location filename="../panels/FlangeAdvancedParameters.ui" line="84"/>
         <source>Round</source>
-        <translation type="unfinished"></translation>
+        <translation>圓角</translation>
     </message>
     <message>
         <location filename="../panels/FlangeAdvancedParameters.ui" line="112"/>
         <source>Auto Miter</source>
-        <translation type="unfinished"></translation>
+        <translation>自動斜接</translation>
     </message>
     <message>
         <location filename="../panels/FlangeAdvancedParameters.ui" line="135"/>
         <source>Maximum Extend Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximum Extend Distance</translation>
     </message>
     <message>
         <location filename="../panels/FlangeAdvancedParameters.ui" line="152"/>
         <source>Minimum Gap</source>
-        <translation type="unfinished"></translation>
+        <translation>最小間隙</translation>
     </message>
     <message>
         <location filename="../panels/FlangeAdvancedParameters.ui" line="162"/>
         <source>Manual Miter</source>
-        <translation type="unfinished"></translation>
+        <translation>手動斜接</translation>
     </message>
     <message>
         <location filename="../panels/FlangeAdvancedParameters.ui" line="194"/>
         <source>Angle 2</source>
-        <translation type="unfinished"></translation>
+        <translation>角度 2</translation>
     </message>
     <message>
         <location filename="../panels/FlangeAdvancedParameters.ui" line="201"/>
         <source>Angle 1</source>
-        <translation type="unfinished"></translation>
+        <translation>角度 1</translation>
     </message>
 </context>
 <context>
@@ -655,239 +678,239 @@
     <message>
         <location filename="../panels/FlangeParameters.ui" line="20"/>
         <source>Flange Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>法蘭參數</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="30"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>一般</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="41"/>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>選擇</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="79"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="84"/>
         <source>SubElement</source>
-        <translation type="unfinished"></translation>
+        <translation>子元件</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="92"/>
         <source>Bend</source>
-        <translation type="unfinished"></translation>
+        <translation>彎曲</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="98"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>類型</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="106"/>
         <source>Material Outside</source>
-        <translation type="unfinished"></translation>
+        <translation>外部對齊材質</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="111"/>
         <source>Material Inside</source>
-        <translation type="unfinished"></translation>
+        <translation>內部對齊材質</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="116"/>
         <source>Thickness Outside</source>
-        <translation type="unfinished"></translation>
+        <translation>外部厚度</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="121"/>
         <location filename="../panels/FlangeParameters.ui" line="129"/>
         <source>Offset</source>
-        <translation type="unfinished"></translation>
+        <translation>偏移</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="146"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>半徑</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="169"/>
         <location filename="../panels/FlangeParameters.ui" line="618"/>
         <source>Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>角度</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="192"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>長度</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="214"/>
         <source>Length mode</source>
-        <translation type="unfinished"></translation>
+        <translation>長度模式</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="222"/>
         <source>Leg</source>
-        <translation type="unfinished"></translation>
+        <translation>腿</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="227"/>
         <source>Outer Sharp</source>
-        <translation type="unfinished"></translation>
+        <translation>外部銳角</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="232"/>
         <source>Inner Sharp</source>
-        <translation type="unfinished"></translation>
+        <translation>內部銳角</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="237"/>
         <source>Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>切向</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="249"/>
         <source>Unfold</source>
-        <translation type="unfinished"></translation>
+        <translation>展開</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="256"/>
         <source>Reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>反轉</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="282"/>
         <source>Offsets</source>
-        <translation type="unfinished"></translation>
+        <translation>偏移</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="294"/>
         <source>Side Offsets</source>
-        <translation type="unfinished"></translation>
+        <translation>側面偏移</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="300"/>
         <source>Gap A</source>
-        <translation type="unfinished"></translation>
+        <translation>間距 A</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="317"/>
         <source>Gap B</source>
-        <translation type="unfinished"></translation>
+        <translation>間距 B</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="334"/>
         <source>Extend A</source>
-        <translation type="unfinished"></translation>
+        <translation>延伸 A</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="351"/>
         <source>Extend B</source>
-        <translation type="unfinished"></translation>
+        <translation>延伸 B</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="368"/>
         <source>Relief Cuts</source>
-        <translation type="unfinished"></translation>
+        <translation>減免削減</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="374"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>寬度</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="387"/>
         <source>Depth</source>
-        <translation type="unfinished"></translation>
+        <translation>深度</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="404"/>
         <source>mm</source>
-        <translation type="unfinished"></translation>
+        <translation>mm</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="419"/>
         <source>Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>矩形</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="432"/>
         <source>Round</source>
-        <translation type="unfinished"></translation>
+        <translation>圓角</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="474"/>
         <source>Miter</source>
-        <translation type="unfinished"></translation>
+        <translation>斜接</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="480"/>
         <source>Auto Miter</source>
-        <translation type="unfinished"></translation>
+        <translation>自動斜接</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="493"/>
         <source>Auto Miter Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>自動斜接參數</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="499"/>
         <source>Minimum Gap</source>
-        <translation type="unfinished"></translation>
+        <translation>最小間隙</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="516"/>
         <source>Max Extend Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>最大延伸距離</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="536"/>
         <source>Manual Miter</source>
-        <translation type="unfinished"></translation>
+        <translation>手動斜接</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="568"/>
         <source>Angle 2</source>
-        <translation type="unfinished"></translation>
+        <translation>角度 2</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="575"/>
         <source>Angle 1</source>
-        <translation type="unfinished"></translation>
+        <translation>角度 1</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="599"/>
         <source>Perforation</source>
-        <translation type="unfinished"></translation>
+        <translation>穿孔</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="605"/>
         <source>Perforate</source>
-        <translation type="unfinished"></translation>
+        <translation>穿孔</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="612"/>
         <source>Perforation Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>穿孔參數</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="635"/>
         <source>Initial Cut Length</source>
-        <translation type="unfinished"></translation>
+        <translation>初始切割長度</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="652"/>
         <source>Max Cut Length</source>
-        <translation type="unfinished"></translation>
+        <translation>最大切割長度</translation>
     </message>
     <message>
         <location filename="../panels/FlangeParameters.ui" line="669"/>
         <source>Max Tab Length</source>
-        <translation type="unfinished"></translation>
+        <translation>最大標籤長度</translation>
     </message>
 </context>
 <context>
@@ -895,37 +918,37 @@
     <message>
         <location filename="../panels/SolidCornerReliefPanel.ui" line="14"/>
         <source>Add Corner Relief on Solid</source>
-        <translation type="unfinished"></translation>
+        <translation>在實體上加入轉角止裂槽</translation>
     </message>
     <message>
         <location filename="../panels/SolidCornerReliefPanel.ui" line="25"/>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>選擇</translation>
     </message>
     <message>
         <location filename="../panels/SolidCornerReliefPanel.ui" line="63"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location filename="../panels/SolidCornerReliefPanel.ui" line="68"/>
         <source>SubElement</source>
-        <translation type="unfinished"></translation>
+        <translation>子元件</translation>
     </message>
     <message>
         <location filename="../panels/SolidCornerReliefPanel.ui" line="76"/>
         <source>Extend</source>
-        <translation type="unfinished"></translation>
+        <translation>延伸</translation>
     </message>
     <message>
         <location filename="../panels/SolidCornerReliefPanel.ui" line="95"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>尺寸</translation>
     </message>
     <message>
         <location filename="../panels/SolidCornerReliefPanel.ui" line="115"/>
         <source>Refine</source>
-        <translation type="unfinished"></translation>
+        <translation>細緻化</translation>
     </message>
 </context>
 <context>
@@ -933,52 +956,52 @@
     <message>
         <location filename="../panels/StampPanel.ui" line="14"/>
         <source>Generate Sheet Metal base shape</source>
-        <translation type="unfinished"></translation>
+        <translation>產生鈑金工作台基礎形狀</translation>
     </message>
     <message>
         <location filename="../panels/StampPanel.ui" line="35"/>
         <source>Select Face</source>
-        <translation type="unfinished"></translation>
+        <translation>選擇面</translation>
     </message>
     <message>
         <location filename="../panels/StampPanel.ui" line="42"/>
         <source>Select Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>選擇工具</translation>
     </message>
     <message>
         <location filename="../panels/StampPanel.ui" line="52"/>
         <source>Selected Feature</source>
-        <translation type="unfinished"></translation>
+        <translation>已選取特徵</translation>
     </message>
     <message>
         <location filename="../panels/StampPanel.ui" line="68"/>
         <source>Position Offset</source>
-        <translation type="unfinished"></translation>
+        <translation>位置偏移</translation>
     </message>
     <message>
         <location filename="../panels/StampPanel.ui" line="74"/>
         <source>Offset X</source>
-        <translation type="unfinished"></translation>
+        <translation>偏移 X</translation>
     </message>
     <message>
         <location filename="../panels/StampPanel.ui" line="84"/>
         <source>Offset Y</source>
-        <translation type="unfinished"></translation>
+        <translation>偏移 Y</translation>
     </message>
     <message>
         <location filename="../panels/StampPanel.ui" line="94"/>
         <source>Offset Z</source>
-        <translation type="unfinished"></translation>
+        <translation>偏移 Z</translation>
     </message>
     <message>
         <location filename="../panels/StampPanel.ui" line="104"/>
         <source>Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>角度</translation>
     </message>
     <message>
         <location filename="../panels/StampPanel.ui" line="126"/>
         <source>Thickness</source>
-        <translation type="unfinished"></translation>
+        <translation>厚度</translation>
     </message>
 </context>
 <context>
@@ -986,105 +1009,105 @@
     <message>
         <location filename="../panels/UnfoldSketchOptions.ui" line="14"/>
         <source>Projection Sketch</source>
-        <translation type="unfinished"></translation>
+        <translation>投影草圖</translation>
     </message>
     <message>
         <location filename="../panels/UnfoldSketchOptions.ui" line="20"/>
         <source>Generate projection sketch</source>
-        <translation type="unfinished"></translation>
+        <translation>產生投影草圖</translation>
     </message>
     <message>
         <location filename="../panels/UnfoldSketchOptions.ui" line="35"/>
         <source>Color</source>
-        <translation type="unfinished"></translation>
+        <translation>顏色</translation>
     </message>
     <message>
         <location filename="../panels/UnfoldSketchOptions.ui" line="74"/>
         <source>Separate projection layers</source>
-        <translation type="unfinished"></translation>
+        <translation>單獨的投影層</translation>
     </message>
     <message>
         <location filename="../panels/UnfoldSketchOptions.ui" line="83"/>
         <source>Bend lines color</source>
-        <translation type="unfinished"></translation>
+        <translation>彎折線顏色</translation>
     </message>
     <message>
         <location filename="../panels/UnfoldSketchOptions.ui" line="117"/>
         <source>Internal lines color</source>
-        <translation type="unfinished"></translation>
+        <translation>內部線條顏色</translation>
     </message>
 </context>
 <context>
     <name>SMUnfoldTaskPanel</name>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="14"/>
+        <location filename="../UnfoldOptions.ui" line="14"/>
         <source>Unfold sheet metal object</source>
-        <translation type="unfinished"></translation>
+        <translation>展開板金物體</translation>
     </message>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="22"/>
+        <location filename="../UnfoldOptions.ui" line="22"/>
         <source>Generate projection sketch</source>
-        <translation type="unfinished"></translation>
+        <translation>產生投影草圖</translation>
     </message>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="55"/>
+        <location filename="../UnfoldOptions.ui" line="55"/>
         <source>Separate projection layers</source>
-        <translation type="unfinished"></translation>
+        <translation>單獨的投影層</translation>
     </message>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="64"/>
+        <location filename="../UnfoldOptions.ui" line="64"/>
         <source>Bend lines color</source>
-        <translation type="unfinished"></translation>
+        <translation>彎折線顏色</translation>
     </message>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="91"/>
+        <location filename="../UnfoldOptions.ui" line="91"/>
         <source>Internal lines color</source>
-        <translation type="unfinished"></translation>
+        <translation>內部線條顏色</translation>
     </message>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="121"/>
+        <location filename="../UnfoldOptions.ui" line="121"/>
         <source>Export sketch</source>
-        <translation type="unfinished"></translation>
+        <translation>匯出草圖</translation>
     </message>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="141"/>
+        <location filename="../UnfoldOptions.ui" line="141"/>
         <source>DXF</source>
-        <translation type="unfinished"></translation>
+        <translation>DXF</translation>
     </message>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="154"/>
+        <location filename="../UnfoldOptions.ui" line="154"/>
         <source>SVG</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG</translation>
     </message>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="168"/>
+        <location filename="../UnfoldOptions.ui" line="168"/>
         <source>Material Definition Sheet</source>
-        <translation type="unfinished"></translation>
+        <translation>材質定義表</translation>
     </message>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="185"/>
+        <location filename="../UnfoldOptions.ui" line="185"/>
         <source>Manual K-Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>手動 K-係數</translation>
     </message>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="236"/>
+        <location filename="../UnfoldOptions.ui" line="236"/>
         <source>ANSI</source>
-        <translation type="unfinished"></translation>
+        <translation>ANSI</translation>
     </message>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="246"/>
+        <location filename="../UnfoldOptions.ui" line="246"/>
         <source>DIN</source>
-        <translation type="unfinished"></translation>
+        <translation>DIN</translation>
     </message>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="272"/>
+        <location filename="../UnfoldOptions.ui" line="272"/>
         <source>Unfold object transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>展開物體透明度</translation>
     </message>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="291"/>
+        <location filename="../UnfoldOptions.ui" line="291"/>
         <source>%</source>
-        <translation type="unfinished"></translation>
+        <translation>%</translation>
     </message>
 </context>
 <context>
@@ -1092,458 +1115,463 @@
     <message>
         <location filename="../../SheetMetalBaseCmd.py" line="113"/>
         <source>Bend Plane</source>
-        <translation type="unfinished"></translation>
+        <translation>彎曲平面</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseCmd.py" line="117"/>
+        <location filename="../SheetMetalBaseCmd.py" line="222"/>
         <source>Wall Sketch object</source>
-        <translation type="unfinished"></translation>
+        <translation>牆面草圖物體</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseCmd.py" line="132"/>
+        <location filename="../SheetMetalBaseCmd.py" line="210"/>
         <source>Thickness of sheetmetal</source>
-        <translation type="unfinished"></translation>
+        <translation>鈑金厚度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseCmd.py" line="138"/>
+        <location filename="../SheetMetalBaseCmd.py" line="218"/>
         <source>Length of wall</source>
-        <translation type="unfinished"></translation>
+        <translation>牆面長度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseCmd.py" line="144"/>
+        <location filename="../SheetMetalBaseCmd.py" line="239"/>
         <source>Extrude Symmetric to Plane</source>
-        <translation type="unfinished"></translation>
+        <translation>擠出對稱於平面</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseCmd.py" line="150"/>
+        <location filename="../SheetMetalBaseCmd.py" line="243"/>
         <source>Reverse Extrusion Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>反向擠壓方向</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFoldCmd.py" line="256"/>
+        <location filename="../SheetMetalFoldCmd.py" line="352"/>
         <source>Bend Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>彎曲半徑</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFoldCmd.py" line="260"/>
+        <location filename="../SheetMetalFoldCmd.py" line="356"/>
         <source>Bend Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>彎曲角度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFoldCmd.py" line="266"/>
+        <location filename="../SheetMetalFoldCmd.py" line="362"/>
         <source>Bend Reference Line List</source>
-        <translation type="unfinished"></translation>
+        <translation>折彎參考線列表</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFoldCmd.py" line="270"/>
+        <location filename="../SheetMetalFoldCmd.py" line="366"/>
         <source>Invert Solid Bend Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>反轉實體折彎方向</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFoldCmd.py" line="274"/>
+        <location filename="../SheetMetalFoldCmd.py" line="370"/>
         <source>Neutral Axis Position</source>
-        <translation type="unfinished"></translation>
+        <translation>中性軸位置</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFoldCmd.py" line="278"/>
+        <location filename="../SheetMetalFoldCmd.py" line="374"/>
         <source>Invert Bend Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>反轉彎曲方向</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFoldCmd.py" line="282"/>
+        <location filename="../SheetMetalFoldCmd.py" line="378"/>
         <source>Unfold Bend</source>
-        <translation type="unfinished"></translation>
+        <translation>展開彎曲</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFoldCmd.py" line="296"/>
+        <location filename="../SheetMetalFoldCmd.py" line="392"/>
         <source>Bend Line Position</source>
-        <translation type="unfinished"></translation>
+        <translation>彎折線位置</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalExtendCmd.py" line="297"/>
+        <location filename="../SheetMetalExtendCmd.py" line="315"/>
         <source>Length of Wall</source>
-        <translation type="unfinished"></translation>
+        <translation>牆面長度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalExtendCmd.py" line="301"/>
+        <location filename="../SheetMetalExtendCmd.py" line="317"/>
         <source>Gap from left side</source>
-        <translation type="unfinished"></translation>
+        <translation>左側間隙</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalExtendCmd.py" line="303"/>
+        <location filename="../SheetMetalExtendCmd.py" line="319"/>
         <source>Gap from right side</source>
-        <translation type="unfinished"></translation>
+        <translation>右側間隙</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalExtendCmd.py" line="305"/>
+        <location filename="../SheetMetalExtendCmd.py" line="321"/>
         <source>Base object</source>
-        <translation type="unfinished"></translation>
+        <translation>基礎物體</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalExtendCmd.py" line="315"/>
+        <location filename="../SheetMetalExtendCmd.py" line="327"/>
         <source>Offset for subtraction</source>
-        <translation type="unfinished"></translation>
+        <translation>減免因素偏移量</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalExtendCmd.py" line="332"/>
+        <location filename="../SheetMetalExtendCmd.py" line="339"/>
         <source>Wall Sketch</source>
-        <translation type="unfinished"></translation>
+        <translation>牆面草圖</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalExtendCmd.py" line="338"/>
+        <location filename="../SheetMetalExtendCmd.py" line="343"/>
         <source>Use Refine</source>
-        <translation type="unfinished"></translation>
+        <translation>使用優化</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalExtendCmd.py" line="346"/>
+        <location filename="../SheetMetalExtendCmd.py" line="349"/>
         <source>Use Subtraction</source>
-        <translation type="unfinished"></translation>
+        <translation>使用減免因素</translation>
     </message>
     <message>
-        <location filename="../../SketchOnSheetMetalCmd.py" line="270"/>
+        <location filename="../SketchOnSheetMetalCmd.py" line="321"/>
         <source>Base Object</source>
-        <translation type="unfinished"></translation>
+        <translation>基礎物體</translation>
     </message>
     <message>
-        <location filename="../../SketchOnSheetMetalCmd.py" line="274"/>
+        <location filename="../SketchOnSheetMetalCmd.py" line="325"/>
         <source>Sketch on Sheetmetal</source>
-        <translation type="unfinished"></translation>
+        <translation>草圖於鈑金工作台</translation>
     </message>
     <message>
-        <location filename="../../SketchOnSheetMetalCmd.py" line="278"/>
+        <location filename="../SketchOnSheetMetalCmd.py" line="329"/>
         <source>Gap from Left Side</source>
-        <translation type="unfinished"></translation>
+        <translation>左側間隙</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1402"/>
+        <location filename="../SheetMetalCmd.py" line="1347"/>
         <source>Gap from Right Side</source>
-        <translation type="unfinished"></translation>
+        <translation>右側間隙</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1417"/>
+        <location filename="../SheetMetalCmd.py" line="1362"/>
         <source>Extend from Left Side</source>
-        <translation type="unfinished"></translation>
+        <translation>從左側延伸</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1423"/>
+        <location filename="../SheetMetalCmd.py" line="1368"/>
         <source>Extend from Right Side</source>
-        <translation type="unfinished"></translation>
+        <translation>從右側延伸</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1429"/>
+        <location filename="../SheetMetalCmd.py" line="1374"/>
         <source>Bend Type</source>
-        <translation type="unfinished"></translation>
+        <translation>彎曲類型</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1435"/>
+        <location filename="../SheetMetalCmd.py" line="1380"/>
         <source>Type of Length Specification</source>
-        <translation type="unfinished"></translation>
+        <translation>長度規格類型</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1441"/>
+        <location filename="../SheetMetalCmd.py" line="1386"/>
         <source>Relief Width</source>
-        <translation type="unfinished"></translation>
+        <translation>減免寬度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1448"/>
+        <location filename="../SheetMetalCmd.py" line="1393"/>
         <source>Relief Depth</source>
-        <translation type="unfinished"></translation>
+        <translation>減免深度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1455"/>
+        <location filename="../SheetMetalCmd.py" line="1400"/>
         <source>Use Relief Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>使用減免因素</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1462"/>
+        <location filename="../SheetMetalCmd.py" line="1407"/>
         <source>Relief Type</source>
-        <translation type="unfinished"></translation>
+        <translation>解脱類型</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1470"/>
+        <location filename="../SheetMetalCmd.py" line="1415"/>
         <source>Relief Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>減免因素</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1477"/>
+        <location filename="../SheetMetalCmd.py" line="1422"/>
         <source>Bend Miter Angle from Left Side</source>
-        <translation type="unfinished"></translation>
+        <translation>從左側彎曲斜接角度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1484"/>
+        <location filename="../SheetMetalCmd.py" line="1429"/>
         <source>Bend Miter Angle from Right Side</source>
-        <translation type="unfinished"></translation>
+        <translation>從右側彎曲斜接角度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1491"/>
+        <location filename="../SheetMetalCmd.py" line="1436"/>
         <source>Auto Miter Minimum Gap</source>
-        <translation type="unfinished"></translation>
+        <translation>自動斜接最小間隙</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1498"/>
+        <location filename="../SheetMetalCmd.py" line="1443"/>
         <source>Auto Miter maximum Extend Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>自動斜接最大延伸距離</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1505"/>
+        <location filename="../SheetMetalCmd.py" line="1450"/>
         <source>Minimum Gap to Relief Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>到減免切割的最小間隙</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1512"/>
+        <location filename="../SheetMetalCmd.py" line="1457"/>
         <source>Offset Bend</source>
-        <translation type="unfinished"></translation>
+        <translation>偏移彎曲</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1519"/>
+        <location filename="../SheetMetalCmd.py" line="1464"/>
         <source>Enable Auto Miter</source>
-        <translation type="unfinished"></translation>
+        <translation>啟用自動斜接</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1526"/>
+        <location filename="../SheetMetalCmd.py" line="1471"/>
         <source>Shows Unfold View of Current Bend</source>
-        <translation type="unfinished"></translation>
+        <translation>顯示目前折彎的展開檢視</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1544"/>
+        <location filename="../SheetMetalCmd.py" line="1489"/>
         <source>Flip Sketch Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>翻轉草圖方向</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1551"/>
+        <location filename="../SheetMetalCmd.py" line="1496"/>
         <source>Invert Sketch Start</source>
-        <translation type="unfinished"></translation>
+        <translation>反轉草圖起點</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1558"/>
+        <location filename="../SheetMetalCmd.py" line="1503"/>
         <source>Sketch Object</source>
-        <translation type="unfinished"></translation>
+        <translation>草圖物體</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1566"/>
+        <location filename="../SheetMetalCmd.py" line="1511"/>
         <source>Length of Wall List</source>
-        <translation type="unfinished"></translation>
+        <translation>牆面列表長度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1574"/>
+        <location filename="../SheetMetalCmd.py" line="1519"/>
         <source>Bend Angle List</source>
-        <translation type="unfinished"></translation>
+        <translation>彎曲角度列表</translation>
     </message>
     <message>
         <location filename="../../SheetMetalCmd.py" line="1582"/>
         <source>Enable Perforation</source>
-        <translation type="unfinished"></translation>
+        <translation>啟用穿孔</translation>
     </message>
     <message>
         <location filename="../../SheetMetalCmd.py" line="1589"/>
         <source>Perforation Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>穿孔角度</translation>
     </message>
     <message>
         <location filename="../../SheetMetalCmd.py" line="1596"/>
         <source>Initial Perforation Length</source>
-        <translation type="unfinished"></translation>
+        <translation>初始穿孔長度</translation>
     </message>
     <message>
         <location filename="../../SheetMetalCmd.py" line="1603"/>
         <source>Perforation Max Length</source>
-        <translation type="unfinished"></translation>
+        <translation>穿孔最大長度</translation>
     </message>
     <message>
         <location filename="../../SheetMetalCmd.py" line="1610"/>
         <source>Non-Perforation Max Length</source>
-        <translation type="unfinished"></translation>
+        <translation>無孔最大長度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCornerReliefCmd.py" line="442"/>
+        <location filename="../SheetMetalCornerReliefCmd.py" line="492"/>
         <source>Corner Relief Type</source>
-        <translation type="unfinished"></translation>
+        <translation>邊角減免類型</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCornerReliefCmd.py" line="456"/>
+        <location filename="../SheetMetalCornerReliefCmd.py" line="506"/>
         <source>Size of Shape</source>
-        <translation type="unfinished"></translation>
+        <translation>形狀尺寸</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCornerReliefCmd.py" line="458"/>
+        <location filename="../SheetMetalCornerReliefCmd.py" line="508"/>
         <source>Size Ratio of Shape</source>
-        <translation type="unfinished"></translation>
+        <translation>形狀尺寸比</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCornerReliefCmd.py" line="466"/>
+        <location filename="../SheetMetalCornerReliefCmd.py" line="516"/>
         <source>Corner Relief Sketch</source>
-        <translation type="unfinished"></translation>
+        <translation>邊角減免草圖</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCornerReliefCmd.py" line="468"/>
+        <location filename="../SheetMetalCornerReliefCmd.py" line="518"/>
         <source>Gap from side one</source>
-        <translation type="unfinished"></translation>
+        <translation>與第一面的差距間隙</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCornerReliefCmd.py" line="472"/>
+        <location filename="../SheetMetalCornerReliefCmd.py" line="522"/>
         <source>Gap from side two</source>
-        <translation type="unfinished"></translation>
+        <translation>與第二面的差距間隙</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFormingCmd.py" line="143"/>
+        <location filename="../SheetMetalFormingCmd.py" line="155"/>
         <source>Offset from Center of Face</source>
-        <translation type="unfinished"></translation>
+        <translation>從面中心偏移</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFormingCmd.py" line="147"/>
+        <location filename="../SheetMetalFormingCmd.py" line="157"/>
         <source>Suppress Forming Feature</source>
-        <translation type="unfinished"></translation>
+        <translation>抑製成形特徵</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFormingCmd.py" line="151"/>
+        <location filename="../SheetMetalFormingCmd.py" line="159"/>
         <source>Tool Position Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>工具位置角度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFormingCmd.py" line="154"/>
+        <location filename="../SheetMetalFormingCmd.py" line="161"/>
         <source>Thickness of Sheetmetal</source>
-        <translation type="unfinished"></translation>
+        <translation>鈑金厚度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFormingCmd.py" line="161"/>
+        <location filename="../SheetMetalFormingCmd.py" line="165"/>
         <source>Forming Tool Object</source>
-        <translation type="unfinished"></translation>
+        <translation>成形工具物體</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalJunction.py" line="76"/>
+        <location filename="../SheetMetalFormingCmd.py" line="167"/>
+        <source>Point Sketch on Sheetmetal</source>
+        <translation>鈑金件上的點草圖</translation>
+    </message>
+    <message>
+        <location filename="../SheetMetalJunction.py" line="115"/>
         <source>Junction Gap</source>
-        <translation type="unfinished"></translation>
+        <translation>結點間隔</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalRelief.py" line="121"/>
+        <location filename="../SheetMetalRelief.py" line="162"/>
         <source>Relief Size</source>
-        <translation type="unfinished"></translation>
+        <translation>減免大小</translation>
     </message>
 </context>
 <context>
     <name>Logger</name>
     <message>
-        <location filename="../../SheetMetalBaseShapeCmd.py" line="389"/>
+        <location filename="../SheetMetalBaseShapeCmd.py" line="281"/>
         <source>Base shape edit mode: </source>
-        <translation type="unfinished"></translation>
+        <translation>基礎形狀編輯模式: </translation>
     </message>
     <message>
-        <location filename="../../SketchOnSheetMetalCmd.py" line="53"/>
+        <location filename="../SketchOnSheetMetalCmd.py" line="100"/>
         <source>Shape is not a real 3D-object or to small for a metal-sheet!</source>
-        <translation type="unfinished"></translation>
+        <translation>形狀不是真正的 3D 物件或對於金屬板來說太小!</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalUnfoldCmd.py" line="62"/>
+        <location filename="../SheetMetalUnfoldCmd.py" line="62"/>
         <source>Running unattended unfold...</source>
-        <translation type="unfinished"></translation>
+        <translation>自動展開執行...</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalUnfolder.py" line="424"/>
+        <location filename="../SheetMetalUnfolder.py" line="424"/>
         <source>k_Factor is a readonly property! Won&apos;t set to:</source>
-        <translation type="unfinished"></translation>
+        <translation>k_Factor 是一個唯讀屬性! 不會設定為:</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalUnfolder.py" line="2497"/>
+        <location filename="../SheetMetalUnfolder.py" line="2497"/>
         <source>at line {} got exception: </source>
-        <translation type="unfinished"></translation>
+        <translation>異常於線 {}: </translation>
     </message>
     <message>
-        <location filename="../../SheetMetalUnfolder.py" line="3134"/>
+        <location filename="../SheetMetalUnfolder.py" line="3134"/>
         <source>exception at line </source>
-        <translation type="unfinished"></translation>
+        <translation>異常於線 </translation>
     </message>
     <message>
-        <location filename="../../SheetMetalUnfolder.py" line="3196"/>
+        <location filename="../SheetMetalUnfolder.py" line="3196"/>
         <source>tidying up Unfold_Sketch_Outline</source>
-        <translation type="unfinished"></translation>
+        <translation>異常於線 {}: 草圖線框失敗，重新整理後重試</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalUnfolder.py" line="3253"/>
+        <location filename="../SheetMetalUnfolder.py" line="3253"/>
         <source>discretizing Sketch</source>
-        <translation type="unfinished"></translation>
+        <translation>離散化草圖</translation>
     </message>
     <message>
-        <location filename="../../UnfoldGUI.py" line="126"/>
+        <location filename="../UnfoldGUI.py" line="126"/>
         <source>Unfold operation needs to know K-factor value(s) to be used.</source>
-        <translation type="unfinished"></translation>
+        <translation>展開操作需要知道要使用的 K 因子.</translation>
     </message>
 </context>
 <context>
     <name>QMessageBox</name>
     <message>
-        <location filename="../../SheetMetalTools.py" line="54"/>
+        <location filename="../SketchOnSheetMetalCmd.py" line="46"/>
         <source>Error in macro MessageBox</source>
-        <translation type="unfinished"></translation>
+        <translation>錯誤於巨集訊息框</translation>
     </message>
     <message>
-        <location filename="../../UnfoldGUI.py" line="250"/>
+        <location filename="../UnfoldGUI.py" line="250"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>警告</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../SheetMetalTools.py" line="336"/>
+        <location filename="../SheetMetalRelief.py" line="200"/>
         <source>Edit %1</source>
-        <translation type="unfinished"></translation>
+        <translation>編輯 %1</translation>
     </message>
 </context>
 <context>
     <name>SMBaseShape</name>
     <message>
-        <location filename="../../SheetMetalBaseShapeCmd.py" line="124"/>
+        <location filename="../SheetMetalBaseShapeCmd.py" line="311"/>
         <source>Thickness of sheetmetal</source>
         <comment>Property</comment>
-        <translation type="unfinished"></translation>
+        <translation>鈑金厚度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseShapeCmd.py" line="130"/>
+        <location filename="../SheetMetalBaseShapeCmd.py" line="317"/>
         <source>Bend Radius</source>
         <comment>Property</comment>
-        <translation type="unfinished"></translation>
+        <translation>彎曲半徑</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseShapeCmd.py" line="136"/>
+        <location filename="../SheetMetalBaseShapeCmd.py" line="323"/>
         <source>Shape width</source>
         <comment>Property</comment>
-        <translation type="unfinished"></translation>
+        <translation>造型寬度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseShapeCmd.py" line="142"/>
+        <location filename="../SheetMetalBaseShapeCmd.py" line="329"/>
         <source>Shape length</source>
         <comment>Property</comment>
-        <translation type="unfinished"></translation>
+        <translation>造型長度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseShapeCmd.py" line="148"/>
+        <location filename="../SheetMetalBaseShapeCmd.py" line="335"/>
         <source>Shape height</source>
         <comment>Property</comment>
-        <translation type="unfinished"></translation>
+        <translation>造型高度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseShapeCmd.py" line="154"/>
+        <location filename="../SheetMetalBaseShapeCmd.py" line="341"/>
         <source>Width of top flange</source>
         <comment>Property</comment>
-        <translation type="unfinished"></translation>
+        <translation>頂部凸緣寬度</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseShapeCmd.py" line="160"/>
+        <location filename="../SheetMetalBaseShapeCmd.py" line="347"/>
         <source>Base shape type</source>
         <comment>Property</comment>
-        <translation type="unfinished"></translation>
+        <translation>基礎形狀類型</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseShapeCmd.py" line="167"/>
+        <location filename="../SheetMetalBaseShapeCmd.py" line="354"/>
         <source>Location of part origin</source>
         <comment>Property</comment>
-        <translation type="unfinished"></translation>
+        <translation>零件原點</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseShapeCmd.py" line="174"/>
+        <location filename="../SheetMetalBaseShapeCmd.py" line="361"/>
         <source>Extend sides and flange to close all gaps</source>
         <comment>Property</comment>
-        <translation type="unfinished"></translation>
+        <translation>延伸側面和凸緣以封閉所有間隙</translation>
     </message>
 </context>
 <context>
@@ -1551,163 +1579,231 @@
     <message>
         <location filename="../../ExtrudedCutout.py" line="39"/>
         <source>The sketch for the cut</source>
-        <translation type="unfinished"></translation>
+        <translation>切割草圖</translation>
     </message>
     <message>
         <location filename="../../ExtrudedCutout.py" line="49"/>
         <source>Length of the extrusion direction 1</source>
-        <translation type="unfinished"></translation>
+        <translation>擠壓方向長度1</translation>
     </message>
     <message>
         <location filename="../../ExtrudedCutout.py" line="56"/>
         <source>Length of the extrusion direction 2</source>
-        <translation type="unfinished"></translation>
+        <translation>擠壓方向長度2</translation>
     </message>
     <message>
         <location filename="../../ExtrudedCutout.py" line="65"/>
         <source>Cut type</source>
-        <translation type="unfinished"></translation>
+        <translation>切割類型</translation>
     </message>
     <message>
         <location filename="../../ExtrudedCutout.py" line="80"/>
         <source>Side of the cut</source>
-        <translation type="unfinished"></translation>
+        <translation>側面切口</translation>
     </message>
     <message>
         <location filename="../../ExtrudedCutout.py" line="91"/>
         <source>Selected face</source>
-        <translation type="unfinished"></translation>
+        <translation>已選取表面</translation>
     </message>
     <message>
         <location filename="../../ExtrudedCutout.py" line="101"/>
         <source>Refine the geometry</source>
-        <translation type="unfinished"></translation>
+        <translation>細緻化幾何圖形</translation>
     </message>
     <message>
         <location filename="../../ExtrudedCutout.py" line="434"/>
         <source>Side A Length</source>
-        <translation type="unfinished"></translation>
+        <translation>側面A長度</translation>
     </message>
     <message>
         <location filename="../../ExtrudedCutout.py" line="435"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>長度</translation>
     </message>
     <message>
         <location filename="../../ExtrudedCutout.py" line="500"/>
         <source>Extruded Cutout</source>
-        <translation type="unfinished"></translation>
+        <translation>擠壓切口</translation>
     </message>
     <message>
-        <location filename="../../InitGui.py" line="100"/>
+        <location filename="../InitGui.py" line="98"/>
         <source>&amp;Sheet Metal</source>
-        <translation type="unfinished"></translation>
+        <translation>鈑金工作台(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../../InitGui.py" line="118"/>
+        <location filename="../InitGui.py" line="116"/>
         <source>Sheet Metal</source>
-        <translation type="unfinished"></translation>
+        <translation>鈑金工作台</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseCmd.py" line="258"/>
+        <location filename="../SheetMetalBaseCmd.py" line="324"/>
         <source>Make Base Wall</source>
-        <translation type="unfinished"></translation>
+        <translation>建立基礎牆面</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseShapeCmd.py" line="424"/>
+        <location filename="../SheetMetalBaseShapeCmd.py" line="408"/>
         <source>Add base shape</source>
-        <translation type="unfinished"></translation>
+        <translation>新增基礎形狀</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBaseShapeCmd.py" line="426"/>
+        <location filename="../SheetMetalBaseShapeCmd.py" line="410"/>
         <source>Add basic sheet metal object.</source>
-        <translation type="unfinished"></translation>
+        <translation>新增基本板金物體.</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalBend.py" line="200"/>
+        <location filename="../SheetMetalBend.py" line="408"/>
         <source>Make Bend</source>
-        <translation type="unfinished"></translation>
+        <translation>建立彎曲</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCmd.py" line="1825"/>
+        <location filename="../SheetMetalBend.py" line="410"/>
+        <source>Create Bend where two walls come together on solids
+1. Select edge(s) to create bend on corner edge(s).
+2. Use Property editor to modify parameters</source>
+        <translation>建立彎曲，其中兩面牆體在實體上匯合在一起
+1. 選擇邊以在拐角邊上建立彎曲.
+2. 使用屬性編輯器修改參數</translation>
+    </message>
+    <message>
+        <location filename="../SheetMetalCmd.py" line="1880"/>
         <source>Make Wall</source>
-        <translation type="unfinished"></translation>
+        <translation>建立彎曲牆面</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalCornerReliefCmd.py" line="603"/>
+        <location filename="../SheetMetalCornerReliefCmd.py" line="662"/>
         <source>Add Corner Relief</source>
-        <translation type="unfinished"></translation>
+        <translation>增加拐角浮雕解脱</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalExtendCmd.py" line="426"/>
+        <location filename="../SheetMetalExtendCmd.py" line="599"/>
         <source>Extend Face</source>
-        <translation type="unfinished"></translation>
+        <translation>延伸表面</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFoldCmd.py" line="377"/>
+        <location filename="../SheetMetalExtendCmd.py" line="601"/>
+        <source>Extends one or more face, on existing sheet metal.
+1. Select edges or thickness side faces to create walls.
+2. Select a sketch in property editor to create tabs. 
+3. Use Property editor to modify other parameters</source>
+        <translation>在現有鈑金件上延伸一個或多個面.
+1. 選擇邊或厚度側面來建立牆面.
+2. 在屬性編輯器中選擇草圖以建立分頁.
+3. 使用屬性編輯器修改其他參數</translation>
+    </message>
+    <message>
+        <location filename="../SheetMetalFoldCmd.py" line="524"/>
         <source>Fold a Wall</source>
-        <translation type="unfinished"></translation>
+        <translation>收攏牆面</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFormingCmd.py" line="509"/>
+        <location filename="../SheetMetalFormingCmd.py" line="485"/>
         <source>Make Forming in Wall</source>
-        <translation type="unfinished"></translation>
+        <translation>牆體成型</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalFormingCmd.py" line="511"/>
+        <location filename="../SheetMetalFormingCmd.py" line="487"/>
         <source>Make a forming using tool in metal sheet
 1. Select a flat face on sheet metal and
 2. Select face(s) on forming tool Shape to create Formed sheetmetal.
 3. Use Suppress in Property editor to disable during unfolding
 4. Use Property editor to modify other parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>使用金屬板中的工具進行成型
+1. 在鈑金上選擇一個平面，然後
+2. 選擇成形工具形狀上的面以建立成形鈑金件.
+3. 在屬性編輯器中使用壓制在展開時禁用
+4. 使用屬性編輯器修改其他參數</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalJunction.py" line="161"/>
+        <location filename="../SheetMetalJunction.py" line="367"/>
         <source>Make Junction</source>
-        <translation type="unfinished"></translation>
+        <translation>建立結點</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalJunction.py" line="163"/>
+        <location filename="../SheetMetalJunction.py" line="369"/>
         <source>Create a rip where two walls come together on solids.
 1. Select edge(s) to create rip on corner edge(s).
 2. Use Property editor to modify parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>建立一個裂口，其中兩面牆體在實體上匯合在一起.
+1. 選擇邊以在角邊上建立裂口.
+2. 使用屬性編輯器修改參數</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalRelief.py" line="201"/>
+        <location filename="../SheetMetalRelief.py" line="415"/>
         <source>Make Relief</source>
-        <translation type="unfinished"></translation>
+        <translation>建立解脱</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalRelief.py" line="203"/>
+        <location filename="../SheetMetalRelief.py" line="417"/>
         <source>Modify an Individual solid corner to create Relief.
 1. Select Vertex(es) to create Relief on Solid corner Vertex(es).
 2. Use Property editor to modify default parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>修改一個單獨的實角以建立減免.
+1. 選擇頂點以在實體角頂點上建立減免.
+2. 使用屬性編輯器修改預設參數</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalUnfoldCmd.py" line="51"/>
+        <location filename="../SheetMetalUnfoldCmd.py" line="51"/>
         <source>Unattended Unfold</source>
-        <translation type="unfinished"></translation>
+        <translation>展開未處理的</translation>
     </message>
     <message>
-        <location filename="../../SheetMetalUnfoldCmd.py" line="113"/>
+        <location filename="../SheetMetalUnfoldCmd.py" line="113"/>
         <source>Unfold</source>
-        <translation type="unfinished"></translation>
+        <translation>展開</translation>
     </message>
     <message>
-        <location filename="../../SketchOnSheetMetalCmd.py" line="419"/>
+        <location filename="../SketchOnSheetMetalCmd.py" line="460"/>
         <source>Sketch On Sheet metal</source>
-        <translation type="unfinished"></translation>
+        <translation>草圖於鈑金工作台</translation>
     </message>
 </context>
 <context>
     <name>draft</name>
     <message>
-        <location filename="../../SheetMetalJunction.py" line="153"/>
+        <location filename="../SheetMetalRelief.py" line="407"/>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>更新</translation>
+    </message>
+</context>
+<context>
+    <name>Gui::Dialog::DlgSettingsDraft</name>
+    <message>
+        <location filename="../SMprefs.ui" line="14"/>
+        <source>General settings</source>
+        <translation>一般設定</translation>
+    </message>
+    <message>
+        <location filename="../SMprefs.ui" line="26"/>
+        <source>General</source>
+        <translation>一般</translation>
+    </message>
+    <message>
+        <location filename="../SMprefs.ui" line="37"/>
+        <source>Engineering UX Mode</source>
+        <translation>工程 UX 模式</translation>
+    </message>
+    <message>
+        <location filename="../SMprefs.ui" line="70"/>
+        <location filename="../SMprefs.ui" line="123"/>
+        <source>Disabled</source>
+        <translation>停用</translation>
+    </message>
+    <message>
+        <location filename="../SMprefs.ui" line="75"/>
+        <location filename="../SMprefs.ui" line="128"/>
+        <source>Enabled</source>
+        <translation>啟用</translation>
+    </message>
+    <message>
+        <location filename="../SMprefs.ui" line="90"/>
+        <source>Auto Link Bend Radius</source>
+        <translation>自動連結彎曲半徑</translation>
+    </message>
+    <message>
+        <location filename="../SMprefs.ui" line="171"/>
+        <source>Preferences for the SheetMetal Workbench</source>
+        <translation>偏好設定 鈑金工作台</translation>
     </message>
 </context>
 </TS>
