@@ -65,7 +65,7 @@ is_locale_supported() {
 update_locale() {
 	local locale="$1"
 	local u=${locale:+_} # Conditional underscore
-	FILES="../../*.py ../panels/*.ui"
+	FILES="../../*.py ../../SMTests/*.py ../panels/*.ui"
 
 	# NOTE: Execute the right command depending on:
 	# - if it's a locale file or the main, agnostic one
@@ -114,9 +114,9 @@ help() {
 
 # Main function ------------------------------------------------------------------------------------
 
-LUPDATE=/usr/lib/qt6/bin/lupdate # from Qt6
+LUPDATE=/usr/bin/lupdate # from Qt6
 # LUPDATE=lupdate                  # from Qt5
-LRELEASE=/usr/lib/qt6/bin/lrelease # from Qt6
+LRELEASE=/usr/bin/lrelease # from Qt6
 # LRELEASE=lrelease                 # from Qt5
 WB="SheetMetal"
 
