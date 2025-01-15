@@ -4,6 +4,11 @@
 <context>
     <name>App::Property</name>
     <message>
+        <location filename="../SketchOnSheetMetalCmd.py" line="321"/>
+        <source>Base Object</source>
+        <translation>基礎物體</translation>
+    </message>
+    <message>
         <location filename="../../SheetMetalBaseCmd.py" line="113"/>
         <source>Bend Plane</source>
         <translation>彎曲平面</translation>
@@ -12,6 +17,11 @@
         <location filename="../SheetMetalBaseCmd.py" line="210"/>
         <source>Thickness of sheetmetal</source>
         <translation>鈑金厚度</translation>
+    </message>
+    <message>
+        <location filename="../SheetMetalBaseCmd.py" line="222"/>
+        <source>Wall Sketch object</source>
+        <translation>牆面草圖物體</translation>
     </message>
     <message>
         <location filename="../SheetMetalBaseCmd.py" line="239"/>
@@ -24,34 +34,14 @@
         <translation>彎曲半徑</translation>
     </message>
     <message>
-        <location filename="../SheetMetalExtendCmd.py" line="321"/>
-        <source>Base object</source>
-        <translation>基礎物體</translation>
-    </message>
-    <message>
-        <location filename="../SketchOnSheetMetalCmd.py" line="321"/>
-        <source>Base Object</source>
-        <translation>基礎物體</translation>
-    </message>
-    <message>
-        <location filename="../SheetMetalBaseCmd.py" line="222"/>
-        <source>Wall Sketch object</source>
-        <translation>牆面草圖物體</translation>
-    </message>
-    <message>
-        <location filename="../SketchOnSheetMetalCmd.py" line="329"/>
-        <source>Gap from Left Side</source>
-        <translation>左側間隙</translation>
+        <location filename="../SheetMetalFoldCmd.py" line="356"/>
+        <source>Bend Angle</source>
+        <translation>彎曲角度</translation>
     </message>
     <message>
         <location filename="../SheetMetalCmd.py" line="1347"/>
         <source>Gap from Right Side</source>
         <translation>右側間隙</translation>
-    </message>
-    <message>
-        <location filename="../SheetMetalFoldCmd.py" line="356"/>
-        <source>Bend Angle</source>
-        <translation>彎曲角度</translation>
     </message>
     <message>
         <location filename="../SheetMetalCmd.py" line="1362"/>
@@ -347,6 +337,11 @@
 <context>
     <name>Logger</name>
     <message>
+        <location filename="../UnfoldGUI.py" line="126"/>
+        <source>Unfold operation needs to know K-factor value(s) to be used.</source>
+        <translation>展開操作需要知道要使用的 K 因子.</translation>
+    </message>
+    <message>
         <location filename="../SheetMetalBaseShapeCmd.py" line="281"/>
         <source>Base shape edit mode: </source>
         <translation>基礎形狀編輯模式: </translation>
@@ -376,14 +371,20 @@
         <source>Running unattended unfold...</source>
         <translation>自動展開執行...</translation>
     </message>
-    <message>
-        <location filename="../UnfoldGUI.py" line="126"/>
-        <source>Unfold operation needs to know K-factor value(s) to be used.</source>
-        <translation>展開操作需要知道要使用的 K 因子.</translation>
-    </message>
 </context>
 <context>
     <name>QMessageBox</name>
+    <message>
+        <location filename="../../../../../../../../home/Benson/sources/FreeCAD/Local_Mod/sheetmetal-7.0.01/SheetMetalUnfoldCmd.py" line="375"/>
+        <source>&lt;ol&gt;
+&lt;li&gt;Either select &apos;Manual K-factor&apos;&lt;/li&gt;
+&lt;li&gt;Or use a &lt;a href=&apos;{}&apos;&gt;Material Definition Sheet&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</source>
+        <translation>&lt;ol&gt;
+&lt;li&gt;選擇「手動 K 係數」&lt;/li&gt;
+&lt;li&gt;或使用&lt;a href=&apos;{}&apos;&gt;材質定義表&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</translation>
+    </message>
     <message>
         <location filename="../SketchOnSheetMetalCmd.py" line="46"/>
         <source>Error in macro MessageBox</source>
@@ -584,11 +585,6 @@
         <location filename="../BaseShapeOptions.ui" line="354"/>
         <source>Height</source>
         <translation>高度</translation>
-    </message>
-    <message>
-        <location filename="../panels/BaseShapeOptions.ui" line="386"/>
-        <source>Height of base shape</source>
-        <translation>基座形狀的高度</translation>
     </message>
     <message>
         <location filename="../BaseShapeOptions.ui" line="415"/>
@@ -1456,11 +1452,6 @@
         <translation>ANSI</translation>
     </message>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="98"/>
-        <source>Standard</source>
-        <translation>標準</translation>
-    </message>
-    <message>
         <location filename="../panels/UnfoldOptions.ui" line="22"/>
         <source>Generate projection sketch</source>
         <translation>產生投影草圖</translation>
@@ -1491,19 +1482,14 @@
         <translation>SVG</translation>
     </message>
     <message>
-        <location filename="../panels/UnfoldOptions.ui" line="272"/>
-        <source>Unfold object transparency</source>
-        <translation>展開物體透明度</translation>
+        <location filename="../panels/UnfoldOptions.ui" line="246"/>
+        <source>DIN</source>
+        <translation>DIN</translation>
     </message>
     <message>
         <location filename="../panels/UnfoldOptions.ui" line="291"/>
         <source>%</source>
         <translation>%</translation>
-    </message>
-    <message>
-        <location filename="../panels/UnfoldOptions.ui" line="246"/>
-        <source>DIN</source>
-        <translation>DIN</translation>
     </message>
     <message>
         <location filename="../panels/panels/UnfoldOptions.ui" line="279"/>
@@ -1537,6 +1523,79 @@
 </context>
 <context>
     <name>SheetMetal</name>
+    <message>
+        <location filename="../../../../../../../../home/Benson/sources/FreeCAD/Local_Mod/sheetmetal-7.0.01/SheetMetalUnfoldCmd.py" line="49"/>
+        <source>Networkx dependency is missing or FreeCAD is too old. Reverting to old Unfolder
+</source>
+        <translation>Networkx 相依性遺失或 FreeCAD 太舊. 恢復到舊的板金展開
+</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../../home/Benson/sources/FreeCAD/Local_Mod/sheetmetal-7.0.01/SheetMetalUnfoldCmd.py" line="132"/>
+        <source>Manual K-Factor value</source>
+        <translation>手動 K-係數值</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../../home/Benson/sources/FreeCAD/Local_Mod/sheetmetal-7.0.01/SheetMetalUnfoldCmd.py" line="138"/>
+        <source>K-Factor standard</source>
+        <translation>K-係數標準</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../../home/Benson/sources/FreeCAD/Local_Mod/sheetmetal-7.0.01/SheetMetalUnfoldCmd.py" line="146"/>
+        <source>Material definition sheet</source>
+        <translation>材質定義表</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../../home/Benson/sources/FreeCAD/Local_Mod/sheetmetal-7.0.01/SheetMetalUnfoldCmd.py" line="153"/>
+        <source>If set, object recomputation will be done on demand only</source>
+        <translation>如果設定，物體重新計算將只依據需求完成</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../../home/Benson/sources/FreeCAD/Local_Mod/sheetmetal-7.0.01/SheetMetalUnfoldCmd.py" line="159"/>
+        <source>Generate unfold sketch</source>
+        <translation>建立展開草圖</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../../home/Benson/sources/FreeCAD/Local_Mod/sheetmetal-7.0.01/SheetMetalUnfoldCmd.py" line="168"/>
+        <source>Generate separated unfold sketches for outline, inner lines and bend lines</source>
+        <translation>為輪廓、內部線和彎曲線產生單獨的展開草圖</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../../home/Benson/sources/FreeCAD/Local_Mod/sheetmetal-7.0.01/SheetMetalUnfoldCmd.py" line="175"/>
+        <source>Generated sketches</source>
+        <translation>產生草圖</translation>
+    </message>
+    <message>
+        <location filename="../SheetMetalUnfoldCmd.py" line="113"/>
+        <source>Unfold</source>
+        <translation>展開</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../../home/Benson/sources/FreeCAD/Local_Mod/sheetmetal-7.0.01/SheetMetalUnfoldCmd.py" line="512"/>
+        <source>Flatten folded sheet metal object.
+1. Select flat face on sheetmetal shape.
+2. Change parameters from task Panel to create unfold Shape &amp; Flatten drawing.</source>
+        <translation>壓平折疊的金屬板物體.
+1. 選擇鈑金形狀上的平面.
+2. 變更任務面板中的參數以建立展開形狀和展平工程圖.</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../../home/Benson/sources/FreeCAD/Local_Mod/sheetmetal-7.0.01/SheetMetalUnfoldCmd.py" line="549"/>
+        <source>Unfold Update</source>
+        <translation>展開更新</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../../home/Benson/sources/FreeCAD/Local_Mod/sheetmetal-7.0.01/SheetMetalUnfoldCmd.py" line="554"/>
+        <source>Update all unfold objects.
+</source>
+        <translation>更新所有展開物體.
+</translation>
+    </message>
+    <message>
+        <location filename="../../../../../../../../home/Benson/sources/FreeCAD/Local_Mod/sheetmetal-7.0.01/SheetMetalUnfoldCmd.py" line="577"/>
+        <source>Unattended Unfold</source>
+        <translation>展開未處理的</translation>
+    </message>
     <message>
         <location filename="../../ExtrudedCutout.py" line="39"/>
         <source>The sketch for the cut</source>
@@ -1586,6 +1645,11 @@
         <location filename="../../ExtrudedCutout.py" line="500"/>
         <source>Extruded Cutout</source>
         <translation>擠壓切口</translation>
+    </message>
+    <message>
+        <location filename="../InitGui.py" line="98"/>
+        <source>&amp;Sheet Metal</source>
+        <translation>鈑金工作台(&amp;S)</translation>
     </message>
     <message>
         <location filename="../InitGui.py" line="116"/>
@@ -1697,16 +1761,6 @@
         <translation>修改一個單獨的實角以建立減免.
 1. 選擇頂點以在實體角頂點上建立減免.
 2. 使用屬性編輯器修改預設參數</translation>
-    </message>
-    <message>
-        <location filename="../SheetMetalUnfoldCmd.py" line="113"/>
-        <source>Unfold</source>
-        <translation>展開</translation>
-    </message>
-    <message>
-        <location filename="../InitGui.py" line="98"/>
-        <source>&amp;Sheet Metal</source>
-        <translation>鈑金工作台(&amp;S)</translation>
     </message>
     <message>
         <location filename="../SketchOnSheetMetalCmd.py" line="460"/>
