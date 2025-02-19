@@ -114,7 +114,7 @@ class ExtrudedCutout:
             "ImproveLevel",
             FreeCAD.Qt.translate(
                 "SheetMetal",
-                "Level of cut improvement quality. More than 10 can take a very long time",
+                "Level of cut improvement quality. More than 10 can take a very long time"
             ),
             (4, 2, 20, 1),
             "ExtrudedCutoutImprovements",
@@ -125,8 +125,8 @@ class ExtrudedCutout:
             "ImproveCut",
             FreeCAD.Qt.translate(
                 "SheetMetal",
-                "Improve cut geometry if it enters the cutting zone. Only select true if the cut needs fix, 'cause it can be slow",
-            ),
+                "Improve cut geometry if it enters the cutting zone. Only select true if the cut needs fix, 'cause it can be slow"
+                ),
             False,
             "ExtrudedCutoutImprovements"
         )
@@ -166,7 +166,7 @@ class ExtrudedCutout:
         try:
             # Ensure the Sketch and baseObject properties are valid
             if fp.Sketch is None or fp.baseObject is None:
-                raise SMException("Both the Sketch and baseObject properties must be set.")
+                raise SMException(FreeCAD.Qt.translate("SheetMetal", "Both the Sketch and baseObject properties must be set."))
             
             # Get the sketch from the properties
             cutSketch = fp.Sketch
@@ -236,7 +236,7 @@ class ExtrudedCutout:
                                 continue
         
             if min_distance == float('inf'):
-                raise SMException("No opposite face found to calculate thickness.")
+                raise SMException(FreeCAD.Qt.translate("SheetMetal", "No opposite face found to calculate thickness."))
             
             thickness = round(min_distance,4) # Appear that rounding can help on speed performance of the rest of the code
 
@@ -255,7 +255,7 @@ class ExtrudedCutout:
             if parallel_faces:
                 shell = Part.Shell(parallel_faces)
             else:
-                raise SMException("No pairs of parallel faces with the specified thickness distance were found.")
+                raise SMException(FreeCAD.Qt.translate("SheetMetal", "No pairs of parallel faces with the specified thickness distance were found."))
 
             # Surfaces to improve the cut geometry:
             if fp.ImproveCut:
@@ -284,7 +284,7 @@ class ExtrudedCutout:
             compFaces = Part.Compound(myFacesList)
 
             if ExtLength1 == 0 and ExtLength2 == 0:
-                raise SMException("Cut length cannot be zero for both sides.")
+                raise SMException(FreeCAD.Qt.translate("SheetMetal", "Cut length cannot be zero for both sides."))
             else:
                 if ExtLength1 == 0:
                     ExtLength1 = (-ExtLength2)
@@ -374,7 +374,7 @@ class ExtrudedCutout:
 
                 fp.Shape = cut_result
             else:
-                raise SMException("No valid offset shapes were created.")
+                raise SMException(FreeCAD.Qt.translate("SheetMetal", "No valid offset shapes were created."))
 
         except SMException as e:
             FreeCAD.Console.PrintError(f"Error: {e}\n")
@@ -507,8 +507,8 @@ if SheetMetalTools.isGuiLoaded():
                     "Extruded cutout from sketch extrusion\n"
                     "1. Select a face of the sheet metal part (must not be the thickness face) and\n"
                     "2. Select a sketch for the extruded cut (the sketch must be closed).\n"
-                    "3. Use Property editor to modify other parameters",
-                ),
+                    "3. Use Property editor to modify other parameters"
+                    ),
             }
 
         def Activated(self):
@@ -522,7 +522,7 @@ if SheetMetalTools.isGuiLoaded():
                 # Check if we have any sub-objects (faces) selected
                 selection = Gui.Selection.getSelectionEx()[1]
                 if len(selection.SubObjects) == 0:
-                    raise SMException("No face selected. Please select a face.")
+                    raise SMException(FreeCAD.Qt.translate("SheetMetal", "No face selected. Please select a face."))
 
                 #Get selected object
                 selected_object = selection.Object
@@ -531,7 +531,7 @@ if SheetMetalTools.isGuiLoaded():
                 selected_face = [selected_object, selection.SubElementNames[0]]
             else:  # When user select first the object face
                 if len(selection.SubObjects) == 0: # Check if we have any sub-objects (faces) selected
-                    raise SMException("No face selected. Please select a face.")
+                    raise SMException(FreeCAD.Qt.translate("SheetMetal", "No face selected. Please select a face."))
                 
                 # Get selected object
                 selected_object = selection.Object
@@ -544,7 +544,7 @@ if SheetMetalTools.isGuiLoaded():
                 cutSketch = selection.Object
 
             if cutSketch is None or not selected_object.Shape:
-                raise SMException("Both a valid sketch and an object with a shape must be selected.")
+                raise SMException(FreeCAD.Qt.translate("SheetMetal", "Both a valid sketch and an object with a shape must be selected."))
             
             # Create and assign the ExtrudedCutout object
             newObj, activeBody = SheetMetalTools.smCreateNewObject(selected_object, "ExtrudedCutout")

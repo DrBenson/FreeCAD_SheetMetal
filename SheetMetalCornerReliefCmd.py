@@ -225,7 +225,7 @@ def smCornerR(
         reliefFace = Part.Face(sketch)
     else:
         if sketch is None:
-            FreeCAD.Console.PrintError("Sketch object is missing, please select one\n")
+            FreeCAD.Console.PrintError(FreeCAD.Qt.translate("SheetMetal", "Sketch object is missing, please select one\n"))
             return resultSolid
         reliefFace = Part.Face(sketch.Shape.Wires[0]).translate(FreeCAD.Vector(xoffset, yoffset, 0))
     # Part.show(reliefFace,'reliefFace')
@@ -551,8 +551,7 @@ if SheetMetalTools.isGuiLoaded():
                     "SheetMetal",
                     "Corner Relief to metal sheet corner.\n"
                     "1. Select 2 Edges (on flat face that shared with bend faces) to create Relief on sheetmetal.\n"
-                    "2. Use Property editor to modify default parameters",
-                ),
+                    "2. Use Property editor to modify default parameters"),
             }
 
         def Activated(self):

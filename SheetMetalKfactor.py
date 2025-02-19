@@ -96,7 +96,7 @@ class KFactorLookupTable:
             lookup_sheet = lookup_sheet[0]
         else:
             raise ValueError(
-                "No spreadsheet found containing material definition: %s"
+                FreeCAD.Qt.translate("SheetMetal", "No spreadsheet found containing material definition: %s")
                 % material_sheet
             )
 
@@ -104,11 +104,11 @@ class KFactorLookupTable:
         value_cell, k_factor_standard = self.find_k_factor_cell(lookup_sheet)
 
         if key_cell is None:
-            raise ValueError("No cell found with label: 'Radius / Thickness'")
+            raise ValueError(FreeCAD.Qt.translate("SheetMetal", "No cell found with label: 'Radius / Thickness'"))
         if value_cell is None:
-            raise ValueError("No cell found with label: 'K-factor (ANSI/DIN)'")
+            raise ValueError(FreeCAD.Qt.translate("SheetMetal", "No cell found with label: 'K-factor (ANSI/DIN)'"))
         if k_factor_standard is None:
-            raise ValueError("No 'Options' column or 'K-factor (????)' cell found.")
+            raise ValueError(FreeCAD.Qt.translate("SheetMetal", "No 'Options' column or 'K-factor (????)' cell found."))
 
         key_column_name, key_column_row = self.get_cell_tuple(key_cell)
         value_column_name = self.get_cell_tuple(value_cell)[0]
@@ -123,7 +123,7 @@ class KFactorLookupTable:
         )
 
         if k_factor_standard not in ["ansi", "din"]:
-            raise ValueError("Invalid K-factor standard: %s" % k_factor_standard)
+            raise ValueError(FreeCAD.Qt.translate("SheetMetal", "Invalid K-factor standard: %s") % k_factor_standard)
 
         self.k_factor_lookup = k_factor_lookup
         self.k_factor_standard = k_factor_standard
@@ -187,10 +187,10 @@ class KFactorLookupTable:
                     value = sheet.get(opt_value_cell)
                     if option == "K-factor standard":
                         if k_factor_standard is not None:
-                            raise ValueError("Multiple K-factor definitions found")
+                            raise ValueError(FreeCAD.Qt.translate("SheetMetal", "Multiple K-factor definitions found"))
                         k_factor_standard = value.lower()
                 except:
                     break
         if k_factor_standard is None:
-            raise ValueError("'K-factor standard' option is required (ANSI or DIN)")
+            raise ValueError(FreeCAD.Qt.translate("SheetMetal", "'K-factor standard' option is required (ANSI or DIN)"))
         return k_factor_standard

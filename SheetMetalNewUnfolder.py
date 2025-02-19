@@ -39,9 +39,9 @@ try:
     import networkx as nx
 except ImportError:
     FreeCAD.Console.PrintUserError(
-        "The NetworkX Python package could not be imported. "
+        FreeCAD.Qt.translate("SheetMetal", "The NetworkX Python package could not be imported. "
         "Consider checking that it is installed, "
-        "or reinstalling the SheetMetal workbench using the addon manager\n"
+        "or reinstalling the SheetMetal workbench using the addon manager\n")
     )
 
 
@@ -169,7 +169,7 @@ class EstimateThickness:
         if not thickness:
             thickness = EstimateThickness.from_cylinders(shape)
         if not thickness:
-            errmsg = "Couldn't estimate thickness for shape!"
+            errmsg = FreeCAD.Qt.translate("SheetMetal", "Couldn't estimate thickness for shape!")
             raise RuntimeError(errmsg)
         return thickness
 
@@ -487,7 +487,7 @@ class BendDirection(Enum):
             else:
                 return BendDirection.DOWN
         else:
-            errmsg = "Unable to determine bend direction from cylindrical face"
+            errmsg = FreeCAD.Qt.translate("SheetMetal", "Unable to determine bend direction from cylindrical face")
             raise RuntimeError(errmsg)
 
 
@@ -545,7 +545,7 @@ class SketchExtraction:
                     sketch.addGeometry(Part.Arc(startpoint, midpoint, endpoint))
             else:
                 errmsg = (
-                    "Unusable curve type found during sketch creation: " + curvetype
+                    FreeCAD.Qt.translate("SheetMetal", "Unusable curve type found during sketch creation: ") + curvetype
                 )
                 raise RuntimeError(errmsg)
         sketch.Label = object_name
@@ -700,8 +700,8 @@ class BendAllowanceCalculator:
         r_t_header = "".join(c for c in r_t_header if c not in "' ").lower()
         if r_t_header != "radius/thickness":
             errmsg = (
-                "Cell A1 of material definition sheet must "
-                'be exactly "Radius/Thickness"'
+                FreeCAD.Qt.translate("SheetMetal", "Cell A1 of material definition sheet must "
+                'be exactly "Radius/Thickness"')
             )
             raise ValueError(errmsg)
         kf_header = sheet.getContents("B1")
@@ -712,8 +712,8 @@ class BendAllowanceCalculator:
             instance.k_factor_standard = cls.KFactorStandard.DIN
         else:
             errmsg = (
-                "Cell B1 of material definition sheet must be "
-                'one of "K-factor (ANSI)" or "K-factor (DIN)"'
+                FreeCAD.Qt.translate("SheetMetal", "Cell B1 of material definition sheet must be "
+                'one of "K-factor (ANSI)" or "K-factor (DIN)"')
             )
             raise ValueError(errmsg)
         # read cells from the A column until we get to an empty cell
@@ -911,7 +911,7 @@ class Edge2DCleanup:
                 # single edge loops
                 edge = useable_edges[0]
                 if edge.Curve.TypeId != "Part::GeomCircle":
-                    errmsg = "Can't process non-circular single-edge loop"
+                    errmsg = FreeCAD.Qt.translate("SheetMetal", "Can't process non-circular single-edge loop")
                     raise RuntimeError(errmsg)
                 w = Part.Wire(
                     [Edge2DCleanup.circle_xy(edge.Curve.Center, edge.Curve.Radius)]
@@ -1095,7 +1095,7 @@ def compute_unbend_transform(
     # disallow fully cylindrical bends. These can't be formed because the
     # opposite edge of the sheet will intersect the previous face
     if bend_angle > radians(359.9):
-        errmsg = "Bend angle must be less that 359.9 degrees"
+        errmsg = FreeCAD.Qt.translate("SheetMetal", "Bend angle must be less that 359.9 degrees")
         raise RuntimeError(errmsg)
     bend_direction = BendDirection.from_face(bent_face)
     # the reference edge should intersect with the bent cylindrical surface at
@@ -1145,7 +1145,7 @@ def compute_unbend_transform(
             lcs_base_point = corner_4
             uvref = UVRef.TOP_RIGHT
     else:
-        errmsg = "No point on reference edge"
+        errmsg = FreeCAD.Qt.translate("SheetMetal", "No point on reference edge")
         raise RuntimeError(errmsg)
     # note that the x-axis is ignored here based on the priority string
     lcs_rotation = Rotation(x_axis, y_axis, z_axis, "ZYX")

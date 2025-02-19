@@ -428,7 +428,7 @@ if SheetMetalTools.isGuiLoaded():
                     "Extends one or more face, on existing sheet metal.\n"
                     "1. Select edges or thickness side faces to create walls.\n"
                     "2. Select a sketch in property editor to create tabs. \n"
-                    "3. Use Property editor to modify other parameters",
+                    "3. Use Property editor to modify other parameters"
                 ),
             }
 

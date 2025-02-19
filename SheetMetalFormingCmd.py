@@ -99,7 +99,7 @@ def makeforming(tool, base, base_face, thk, tool_faces=None, point=FreeCAD.Vecto
             offsetshell, base_face, tool_faces[0], point, angle)
         base = combine_solids(base, cutSolid_tran, offsetshell_tran)
     except:
-        FreeCAD.Console.PrintWarning("Forming faild. Trying alternate way.")
+        FreeCAD.Console.PrintWarning(FreeCAD.Qt.translate("SheetMetal", "Forming faild. Trying alternate way."))
         offsetshell = tool.makeThickness(
             tool_faces, thk, 0.0001, False, False, 0, 0)
         offsetshell_tran = transform_tool(
@@ -137,7 +137,7 @@ class SMBendWall:
                         _tip_).toolObject = (seltool, seltool_items)
         _tip_ = FreeCAD.Qt.translate(
             "App::Property",
-            "Sketch containing circle's points to multiply and pattern the embossed feature",
+            "Sketch containing circle's points to multiply and pattern the embossed feature"
         )
         obj.addProperty("App::PropertyLink", "Sketch", "Parameters1", _tip_)
         obj.Proxy = self
@@ -357,12 +357,12 @@ if SheetMetalTools.isGuiLoaded():
             self.obj = None
             self.form = QtGui.QWidget()
             self.form.setObjectName("SMFormingWallTaskPanel")
-            self.form.setWindowTitle("Binded faces/edges list")
+            self.form.setWindowTitle(FreeCAD.Qt.translate("SheetMetal", "Binded faces/edges list"))
             self.grid = QtGui.QGridLayout(self.form)
             self.grid.setObjectName("grid")
             self.title = QtGui.QLabel(self.form)
             self.grid.addWidget(self.title, 0, 0, 1, 2)
-            self.title.setText("Select new face(s)/Edge(s) and press Update")
+            self.title.setText(FreeCAD.Qt.translate("SheetMetal", "Select new face(s)/Edge(s) and press Update"))
 
             # tree
             self.tree = QtGui.QTreeWidget(self.form)

@@ -355,7 +355,7 @@ if SheetMetalTools.isGuiLoaded():
                     "Wrap cutout from a Sketch On Sheet metal faces\n"
                     "1. Select a flat face on sheet metal and\n"
                     "2. Select a sketch on same face to create sheetmetal wrapped cut.\n"
-                    "3. Use Property editor to modify other parameters",
+                    "3. Use Property editor to modify other parameters"
                 ),
             }
 

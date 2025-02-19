@@ -251,7 +251,7 @@ def sanitizeSkBsp(s_name, knot_tolerance):
                                     # if (kn == g.KnotSequence[k]):
                                     #        eqp = False
                                     if eqp:
-                                        print("identical splines found")  # ,g,bg)
+                                        print(FreeCAD.Qt.translate("SheetMetal", "identical splines found"))  # ,g,bg)
                                         if j not in idx_to_del:
                                             idx_to_del.append(j)
                         j += 1
@@ -266,7 +266,7 @@ def sanitizeSkBsp(s_name, knot_tolerance):
             # stop
             for i, e in enumerate(idx_to_del):
                 # print('to delete ',s.Geometry[(e)],e)
-                print("deleting identical geo")
+                print(FreeCAD.Qt.translate("SheetMetal", "deleting identical geo"))
                 # print(s.Geometry)
                 s.delGeometry(e)
                 # print(s.Geometry)
@@ -476,7 +476,7 @@ class SheetTree(object):
         self.wire_replacements = []  # list of wires to be replaced during unfold shape creation
 
         if not self.__Shape.isValid():
-            warn_print("The shape is not valid!")
+            warn_print(FreeCAD.Qt.translate("SheetMetal", "The shape is not valid!"))
             self.error_code = 4  # Starting: invalid shape
             self.failed_face_idx = f_idx
 
@@ -511,7 +511,7 @@ class SheetTree(object):
         theVol = self.__Shape.Volume
         if theVol < 0.0001:
             warn_print(
-                "Shape is not a real 3D-object or to small for a metal-sheet!"
+                FreeCAD.Qt.translate("SheetMetal", "Shape is not a real 3D-object or to small for a metal-sheet!")
             )
             self.error_code = 1
             self.failed_face_idx = f_idx
@@ -569,7 +569,7 @@ class SheetTree(object):
         # If the 3rd parameter is True a point on a face is considered as inside
         # if not self.__Shape.isInside(measure_pos, 0.00001, True):
         if not gotValidMeasurePosition:
-            warn_print("Starting measure_pos for thickness measurement is outside!")
+            warn_print(FreeCAD.Qt.translate("SheetMetal", "Starting measure_pos for thickness measurement is outside!"))
             self.error_code = 2
             self.failed_face_idx = f_idx
 
@@ -783,7 +783,7 @@ class SheetTree(object):
         return dist
 
     def divideEdgeFace(self, fIdx, ise_edge, F_vert, tree_node):
-        debug_print("Sheet edge face has more than 4 edges!")
+        debug_print(FreeCAD.Qt.translate("SheetMetal", "Sheet edge face has more than 4 edges!"))
         # first find out where the Sheet edge face has no edge to the opposite side of the sheet
         # There is a need to cut the face.
         # make a cut-tool perpendicular to the ise_edge
@@ -892,7 +892,7 @@ class SheetTree(object):
                         oppoPoint = theVert.Point
 
             if oppoPoint is None:
-                print(" error need always an opposite point in a side face!")
+                print(FreeCAD.Qt.translate("SheetMetal", " error need always an opposite point in a side face!"))
                 # FIXME: need a proper error condition.
 
             # vec1 = Base.Vector(theNode.axis.x, theNode.axis.y, theNode.axis.z) # make a copy
@@ -940,7 +940,7 @@ class SheetTree(object):
                         oppoPoint = theVert.Point
 
             if oppoPoint is None:
-                print(" error need always an opposite point in a side face!")
+                print(FreeCAD.Qt.translate("SheetMetal", " error need always an opposite point in a side face!"))
                 # FIXME: need a proper error condition.
             # vec1 = Base.Vector(radVector.x, radVector.y, radVector.z) # make a copy
             vec1 = (oppoPoint - origin).normalize()
@@ -1398,7 +1398,7 @@ class SheetTree(object):
                 self.error_code = 13
                 self.failed_face_idx = face_idx
                 warn_print(
-                    "No opposite face Debugging Thickness: "
+                    FreeCAD.Qt.translate("SheetMetal", "No opposite face Debugging Thickness: ")
                     + str(self.__thickness)
                 )
                 Part.show(
@@ -1488,7 +1488,7 @@ class SheetTree(object):
             newNode.error_code = 13  # Analysis: counter face not found
             self.error_code = 13
             self.failed_face_idx = face_idx
-            warn_print("No counter-face Debugging Thickness: " + str(self.__thickness))
+            warn_print(FreeCAD.Qt.translate("SheetMetal", "No counter-face Debugging Thickness: ") + str(self.__thickness))
             Part.show(
                 self.__Shape.Faces[face_idx], "FailedFace" + str(face_idx + 1) + "_"
             )
@@ -1534,7 +1534,7 @@ class SheetTree(object):
                 face_idx, parent_node, parent_edge, wires_edge_lists
             )
             # Need also the edge_list in the node!
-            debug_print("The list after make_new_face_node: " + str(self.index_list))
+            debug_print(FreeCAD.Qt.translate("SheetMetal", "The list after make_new_face_node: ") + str(self.index_list))
 
             # in the new code, only the list of child faces will be analyzed.
             removalList = []
@@ -3059,7 +3059,7 @@ def getUnfoldSketches(
             FreeCAD.Qt.translate(
                 "Logger",
                 "Exception at line {}"
-                ": Outline Sketch failed, re-trying after tidying up",
+                ": Outline Sketch failed, re-trying after tidying up"
             ).format(str(exc_tb.tb_lineno))
         )
         tidy = True
@@ -3120,7 +3120,7 @@ def generateSketch(edges, name, color, existingSketches = None):
         if existingSketch is None:
             sk.Label = name
     except:
-        print("====> alternate sketch method")
+        print(FreeCAD.Qt.translate("SheetMetal", "====> alternate sketch method"))
         doc = FreeCAD.ActiveDocument
         skb = doc.ActiveObject
         doc.removeObject(skb.Name)

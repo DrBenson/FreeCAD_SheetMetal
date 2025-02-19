@@ -47,7 +47,7 @@ class SMWorkbench(Workbench):
     MenuText = FreeCAD.Qt.translate("SheetMetal", "Sheet Metal")
     ToolTip = FreeCAD.Qt.translate(
         "SheetMetal",
-        "Sheet Metal workbench allows for designing and unfolding sheet metal parts",
+        "Sheet Metal workbench allows for designing and unfolding sheet metal parts"
     )
     Icon = os.path.join(SMIconPath, "SMLogo.svg")
 

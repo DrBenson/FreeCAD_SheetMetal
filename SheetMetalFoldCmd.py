@@ -69,7 +69,7 @@ def smFold(
             # adaptive   адаптивний
             if position == "intersection of planes" :
                 kfactor = (( bendR ) * math.tan(math.radians(bendA / 2.0)) * 180 / (bendA / 2.0) / math.pi - bendR ) / thk
-                FreeCAD.Console.PrintLog("Intersection of planes K-factor is set to " + str(kfactor) + "\n")
+                FreeCAD.Console.PrintLog(FreeCAD.Qt.translate("SheetMetal", "Intersection of planes K-factor is set to ") + str(kfactor) + "\n")
 
             unfoldLength = (bendR + kfactor * thk) * bendA * math.pi / 180.0
             neutralRadius = bendR + kfactor * thk
@@ -130,10 +130,10 @@ def smFold(
             bendEdges = FoldShape.common(tool)
             if tool.Length <= (bendEdges.Edges[0].Length * 1.002):
                 FreeCAD.Console.PrintError(
-                    "The bend line sketch "
+                    FreeCAD.Qt.translate("SheetMetal", "The bend line sketch ")
                     + bendlinesketch.Label
-                    + " is not overhanging"
-                    " the face sufficiently at one end or both, extend to get reliable results for the unfold operation\n"
+                    + FreeCAD.Qt.translate("SheetMetal", " is not overhanging"
+                    " the face sufficiently at one end or both, extend to get reliable results for the unfold operation\n")
                 )
             # Part.show(bendEdges,"bendEdges")
             bendEdge = bendEdges.Edges[0]
@@ -367,7 +367,7 @@ if SheetMetalTools.isGuiLoaded():
                     "1. Select a flat face on sheet metal and\n"
                     "2. Select a bend line (sketch) on same face (ends of sketch bend lines must"
                     " extend beyond edges of face) to create sheetmetal fold.\n"
-                    "3. Use Property editor to modify other parameters",
+                    "3. Use Property editor to modify other parameters"
                 ),
             }
 

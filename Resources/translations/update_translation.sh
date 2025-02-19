@@ -83,10 +83,10 @@ normalize_crowdin_files() {
 	# Rename files which locales are different on FreeCAD and delete not supported locales
 	crowdin_fixes=(af-ZA ar-SA be-BY bg-BG ca-ES cs-CZ da-DK de-DE el-GR eu-ES fi-FI
 		fil-PH fr-FR gl-ES hr-HR hu-HU it-IT ja-JP ka-GE kab-KAB ko-KR lt-LT nl-NL
-		no-NO pl-PL ro-RO ru-RU sk-SK sl-SI sr-SP tr-TR uk-UA vi-VN)
+		no-NO pl-PL ro-RO ru-RU sk-SK sl-SI sr-SP tr-TR uk-UA vi-VN zh-TW)
 
 	crowdin_deletes=(az-AZ bn-BD br-FR bs-BA en en-GB en-US eo-UY es-CO es-VE et-EE fa-IR he-IL
-		hi-IN hy-AM id-ID kaa lv-LV mk-MK ms-MY sat-IN si-LK ta-IN te-IN th-TH ur-PK xav yo-NG)
+		hi-IN hy-AM id-ID kaa lv-LV mk-MK ms-MY sat-IN si-LK ta-IN te-IN th-TH ur-PK xav yo-NG zh-TW)
 
 	for pattern in "${crowdin_fixes[@]}"; do
 		find . -type f -name "*_${pattern}\.*" | while read -r file; do

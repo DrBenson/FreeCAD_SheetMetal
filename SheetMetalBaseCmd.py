@@ -112,15 +112,15 @@ def smBase(
 class SMBaseBend:
     def __init__(self, obj, sketch):
         '''"Add wall or Wall with radius bend"'''
-        _tip_ = translate("App::Property", "Bend Plane")
+        _tip_ =  FreeCAD.Qt.translate("App::Property", "Bend Plane")
         obj.addProperty(
             "App::PropertyEnumeration", "BendSide", "Parameters", _tip_
         ).BendSide = ["Outside", "Inside", "Middle"]
-        _tip_ = translate("App::Property", "Wall Sketch object")
+        _tip_ =  FreeCAD.Qt.translate("App::Property", "Wall Sketch object")
         obj.addProperty(
             "App::PropertyLink", "BendSketch", "Parameters", _tip_
         ).BendSketch = sketch
-        _tip_ = translate("App::Property", "Extrude Symmetric to Plane")
+        _tip_ =  FreeCAD.Qt.translate("App::Property", "Extrude Symmetric to Plane")
         self.addVerifyProperties(obj)
         SheetMetalTools.taskRestoreDefaults(obj, smBaseDefaultVars)
         obj.Proxy = self
@@ -129,31 +129,31 @@ class SMBaseBend:
         SheetMetalTools.smAddLengthProperty(
             obj,
             "Radius",
-            translate("App::Property", "Bend Radius"),
+             FreeCAD.Qt.translate("App::Property", "Bend Radius"),
             1.0
         )
         SheetMetalTools.smAddLengthProperty(
             obj,
             "Thickness",
-            translate("App::Property", "Thickness of sheetmetal"),
+             FreeCAD.Qt.translate("App::Property", "Thickness of sheetmetal"),
             1.0
         )
         SheetMetalTools.smAddLengthProperty(
             obj,
             "Length",
-            translate("App::Property", "Length of wall"),
+             FreeCAD.Qt.translate("App::Property", "Length of wall"),
             100.0
         )
         SheetMetalTools.smAddBoolProperty(
             obj, 
             "MidPlane", 
-            FreeCAD.Qt.translate("App::Property", "Extrude Symmetric to Plane"), 
+            FreeCAD.Qt.translate("App::Property", "Extrude Symmetric to Plane"),
             False
         )
         SheetMetalTools.smAddBoolProperty(
             obj, 
             "Reverse", 
-            FreeCAD.Qt.translate("App::Property", "Reverse Extrusion Direction"), 
+            FreeCAD.Qt.translate("App::Property", "Reverse Extrusion Direction"),
             False
         )
 
@@ -260,14 +260,14 @@ if SheetMetalTools.isGuiLoaded():
                 "Pixmap": os.path.join(
                     icons_path, "SheetMetal_AddBase.svg"
                 ),  # the name of a svg file available in the resources
-                "MenuText": translate("SheetMetal", "Make Base Wall"),
+                "MenuText":  FreeCAD.Qt.translate("SheetMetal", "Make Base Wall"),
                 "Accel": "C, B",
-                "ToolTip": translate(
+                "ToolTip":  FreeCAD.Qt.translate(
                     "SheetMetal",
                     "Create a sheetmetal wall from a sketch\n"
                     "1. Select a Sketch to create bends with walls.\n"
-                    "2. Use Property editor to modify other parameters",
-                ),
+                    "2. Use Property editor to modify other parameters"
+                    ),
             }
 
         def Activated(self):

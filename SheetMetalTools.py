@@ -185,7 +185,7 @@ if isGuiLoaded():
             button.saveText = button.text()
             smSingleSelObserver.button = button
             textbox.setText(f"Select {button.saveText}...")
-            button.setText("Cancel...")
+            button.setText(FreeCAD.Qt.translate("SheetMetal", "Cancel..."))
         else:
             smSingleSelObserver.button = None
             if baseObject is not None:
@@ -375,7 +375,7 @@ if isGuiLoaded():
         if useDialog:
             filePath, _ = QtGui.QFileDialog.getSaveFileName(
                 Gui.getMainWindow(),
-                translate("SheetMetal","Export unfold sketch"),
+                FreeCAD.Qt.translate("SheetMetal","Export unfold sketch"),
                 fileName,                       # Default file path
                 f"Vector Files (*.{fileType})"  # File type filters
             )
@@ -550,11 +550,11 @@ def smIsOperationLegal(body, selobj):
     # FreeCAD.Console.PrintLog(str(selobj) + " " + str(body) + " " + str(smBelongToBody(selobj, body)) + "\n")
     if smIsPartDesign(selobj) and not smBelongToBody(selobj, body):
         smWarnDialog(
-            translate(
+            FreeCAD.Qt.translate(
             "QMessageBox",
             "The selected geometry does not belong to the active Body.\n"
             "Please make the container of this item active by\n"
-            "double clicking on it.",
+            "double clicking on it."
             )
         )
         return False
@@ -603,7 +603,7 @@ def getOriginalBendObject(obj):
 def getElementFromTNP(tnpName):
     names = tnpName.split('.')
     if len(names) > 1:
-        FreeCAD.Console.PrintWarning("Warning: Tnp Name still visible: " + tnpName + "\n")
+        FreeCAD.Console.PrintWarning(FreeCAD.Qt.translate("SheetMetal", "Warning: Tnp Name still visible: ") + tnpName + "\n")
     return names[len(names) - 1].lstrip('?')
 
 def smIsParallel(v1, v2):
