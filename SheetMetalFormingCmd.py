@@ -115,24 +115,24 @@ class SMBendWall:
     def __init__(self, obj, selobj, selobj_items, seltool, seltool_items):
         '''"Add Forming Wall" '''
 
-        _tip_ = translate(
+        _tip_ = FreeCAD.Qt.translate(
             "App::Property", "Suppress Forming Feature")
         obj.addProperty("App::PropertyBool", "SuppressFeature",
                         "Parameters", _tip_).SuppressFeature = False
-        _tip_ = translate("App::Property", "Tool Position Angle")
+        _tip_ = FreeCAD.Qt.translate("App::Property", "Tool Position Angle")
         obj.addProperty("App::PropertyAngle", "angle",
                         "Parameters", _tip_).angle = 0.0
-        _tip_ = translate(
+        _tip_ = FreeCAD.Qt.translate(
             "App::Property", "Thickness of Sheetmetal")
         obj.addProperty("App::PropertyDistance",
                         "thickness", "Parameters", _tip_)
-        _tip_ = translate("App::Property", "Base Object")
+        _tip_ = FreeCAD.Qt.translate("App::Property", "Base Object")
         obj.addProperty("App::PropertyLinkSub", "baseObject", "Parameters",
                         _tip_).baseObject = (selobj, selobj_items)
-        _tip_ = translate("App::Property", "Forming Tool Object")
+        _tip_ = FreeCAD.Qt.translate("App::Property", "Forming Tool Object")
         obj.addProperty("App::PropertyLinkSub", "toolObject", "Parameters",
                         _tip_).toolObject = (seltool, seltool_items)
-        _tip_ = translate(
+        _tip_ = FreeCAD.Qt.translate(
             "App::Property",
             "Sketch containing circle's points to multiply and pattern the embossed feature",
         )
@@ -148,20 +148,20 @@ class SMBendWall:
             obj,
             "App::PropertyLinkSub",
             "toolShearFaces",
-            translate("SheetMetal", "Tool shear faces"),
+            FreeCAD.Qt.translate("SheetMetal", "Tool shear faces"),
             None
         )
 
         SheetMetalTools.smAddDistanceProperty(
             obj,
             "OffsetX",
-            translate("App::Property", "X Offset from Center of Face"),
+            FreeCAD.Qt.translate("App::Property", "X Offset from Center of Face"),
             0.0
         )
         SheetMetalTools.smAddDistanceProperty(
             obj,
             "OffsetY",
-            translate("App::Property", "Y Offset from Center of Face"),
+            FreeCAD.Qt.translate("App::Property", "Y Offset from Center of Face"),
             0.0
         )
         if (hasattr(obj, "offset")):
@@ -313,9 +313,9 @@ if SheetMetalTools.isGuiLoaded():
 
         def GetResources(self):
             return {'Pixmap': os.path.join(icons_path, 'SheetMetal_Forming.svg'),
-                    'MenuText': translate('SheetMetal', 'Make Forming in Wall'),
+                    'MenuText': FreeCAD.Qt.translate('SheetMetal', 'Make Forming in Wall'),
                     'Accel': "M, F",
-                    'ToolTip': translate(
+                    'ToolTip': FreeCAD.Qt.translate(
                         'SheetMetal', 'Make a forming using tool in metal sheet\n'
                         '1. Select a flat face on sheet metal and\n'
                         '2. Select face(s) on forming tool Shape to create Formed sheetmetal.\n'

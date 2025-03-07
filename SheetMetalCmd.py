@@ -1730,7 +1730,7 @@ class SMBendWall:
         '''"Add Wall with radius bend"'''
         self.addVerifyProperties(obj, refAngOffset, checkRefFace)
 
-        _tip_ = translate("App::Property", "Base Object")
+        _tip_ = FreeCAD.Qt.translate("App::Property", "Base Object")
         obj.addProperty(
             "App::PropertyLinkSub", "baseObject", "Parameters", _tip_
         ).baseObject = (selobj, sel_items)
@@ -1739,81 +1739,81 @@ class SMBendWall:
 
     def addVerifyProperties(self, obj, refAngOffset=None, checkRefFace=False):
         SheetMetalTools.smAddLengthProperty(
-            obj, "radius", translate("App::Property", "Bend Radius"), 1.0
+            obj, "radius", FreeCAD.Qt.translate("App::Property", "Bend Radius"), 1.0
         )
         SheetMetalTools.smAddLengthProperty(
-            obj, "length", translate("App::Property", "Length of Wall"), 10.0
+            obj, "length", FreeCAD.Qt.translate("App::Property", "Length of Wall"), 10.0
         )
         SheetMetalTools.smAddDistanceProperty(
             obj,
             "gap1",
-            translate("App::Property", "Gap from Left Side"),
+            FreeCAD.Qt.translate("App::Property", "Gap from Left Side"),
             0.0,
         )
         SheetMetalTools.smAddDistanceProperty(
             obj,
             "gap2",
-            translate("App::Property", "Gap from Right Side"),
+            FreeCAD.Qt.translate("App::Property", "Gap from Right Side"),
             0.0,
         )
         SheetMetalTools.smAddBoolProperty(
             obj,
             "invert",
-            translate("App::Property", "Invert Bend Direction"),
+            FreeCAD.Qt.translate("App::Property", "Invert Bend Direction"),
             False,
         )
         SheetMetalTools.smAddAngleProperty(
-            obj, "angle", translate("App::Property", "Bend Angle"), 90.0
+            obj, "angle", FreeCAD.Qt.translate("App::Property", "Bend Angle"), 90.0
         )
         SheetMetalTools.smAddDistanceProperty(
             obj,
             "extend1",
-            translate("App::Property", "Extend from Left Side"),
+            FreeCAD.Qt.translate("App::Property", "Extend from Left Side"),
             0.0,
         )
         SheetMetalTools.smAddDistanceProperty(
             obj,
             "extend2",
-            translate("App::Property", "Extend from Right Side"),
+            FreeCAD.Qt.translate("App::Property", "Extend from Right Side"),
             0.0,
         )
         SheetMetalTools.smAddEnumProperty(
             obj,
             "BendType",
-            translate("App::Property", "Bend Type"),
+            FreeCAD.Qt.translate("App::Property", "Bend Type"),
             ["Material Outside", "Material Inside", "Thickness Outside", "Offset"],
         )
         SheetMetalTools.smAddEnumProperty(
             obj,
             "LengthSpec",
-            translate("App::Property", "Type of Length Specification"),
+            FreeCAD.Qt.translate("App::Property", "Type of Length Specification"),
             ["Leg", "Outer Sharp", "Inner Sharp", "Tangential"],
         )
         SheetMetalTools.smAddLengthProperty(
             obj,
             "reliefw",
-            translate("App::Property", "Relief Width"),
+            FreeCAD.Qt.translate("App::Property", "Relief Width"),
             0.8,
             "ParametersRelief",
         )
         SheetMetalTools.smAddLengthProperty(
             obj,
             "reliefd",
-            translate("App::Property", "Relief Depth"),
+            FreeCAD.Qt.translate("App::Property", "Relief Depth"),
             1.0,
             "ParametersRelief",
         )
         SheetMetalTools.smAddBoolProperty(
             obj,
             "UseReliefFactor",
-            translate("App::Property", "Use Relief Factor"),
+            FreeCAD.Qt.translate("App::Property", "Use Relief Factor"),
             False,
             "ParametersRelief",
         )
         SheetMetalTools.smAddEnumProperty(
             obj,
             "reliefType",
-            translate("App::Property", "Relief Type"),
+            FreeCAD.Qt.translate("App::Property", "Relief Type"),
             ["Rectangle", "Round"],
             None,
             "ParametersRelief",
@@ -1821,63 +1821,63 @@ class SMBendWall:
         SheetMetalTools.smAddFloatProperty(
             obj,
             "ReliefFactor",
-            translate("App::Property", "Relief Factor"),
+            FreeCAD.Qt.translate("App::Property", "Relief Factor"),
             0.7,
             "ParametersRelief",
         )
         SheetMetalTools.smAddAngleProperty(
             obj,
             "miterangle1",
-            translate("App::Property", "Bend Miter Angle from Left Side"),
+            FreeCAD.Qt.translate("App::Property", "Bend Miter Angle from Left Side"),
             0.0,
             "ParametersMiterangle",
         )
         SheetMetalTools.smAddAngleProperty(
             obj,
             "miterangle2",
-            translate("App::Property", "Bend Miter Angle from Right Side"),
+            FreeCAD.Qt.translate("App::Property", "Bend Miter Angle from Right Side"),
             0.0,
             "ParametersMiterangle",
         )
         SheetMetalTools.smAddLengthProperty(
             obj,
             "minGap",
-            translate("App::Property", "Auto Miter Minimum Gap"),
+            FreeCAD.Qt.translate("App::Property", "Auto Miter Minimum Gap"),
             0.2,
             "ParametersEx",
         )
         SheetMetalTools.smAddLengthProperty(
             obj,
             "maxExtendDist",
-            translate("App::Property", "Auto Miter maximum Extend Distance"),
+            FreeCAD.Qt.translate("App::Property", "Auto Miter maximum Extend Distance"),
             5.0,
             "ParametersEx",
         )
         SheetMetalTools.smAddLengthProperty(
             obj,
             "minReliefGap",
-            translate("App::Property", "Minimum Gap to Relief Cut"),
+            FreeCAD.Qt.translate("App::Property", "Minimum Gap to Relief Cut"),
             1.0,
             "ParametersEx",
         )
         SheetMetalTools.smAddDistanceProperty(
             obj,
             "offset",
-            translate("App::Property", "Offset Bend"),
+            FreeCAD.Qt.translate("App::Property", "Offset Bend"),
             0.0,
             "ParametersEx",
         )
         SheetMetalTools.smAddBoolProperty(
             obj,
             "AutoMiter",
-            translate("App::Property", "Enable Auto Miter"),
+            FreeCAD.Qt.translate("App::Property", "Enable Auto Miter"),
             True,
             "ParametersEx",
         )
         SheetMetalTools.smAddBoolProperty(
             obj,
             "unfold",
-            translate("App::Property", "Shows Unfold View of Current Bend"),
+            FreeCAD.Qt.translate("App::Property", "Shows Unfold View of Current Bend"),
             False,
             "ParametersEx",
         )
@@ -1885,7 +1885,7 @@ class SMBendWall:
             obj,
             "App::PropertyFloatConstraint",
             "kfactor",
-            translate(
+            FreeCAD.Qt.translate(
                 "App::Property",
                 "Location of Neutral Line. Caution: Using ANSI standards, not DIN.",
             ),
@@ -1895,14 +1895,14 @@ class SMBendWall:
         SheetMetalTools.smAddBoolProperty(
             obj,
             "sketchflip",
-            translate("App::Property", "Flip Sketch Direction"),
+            FreeCAD.Qt.translate("App::Property", "Flip Sketch Direction"),
             False,
             "ParametersEx2",
         )
         SheetMetalTools.smAddBoolProperty(
             obj,
             "sketchinvert",
-            translate("App::Property", "Invert Sketch Start"),
+            FreeCAD.Qt.translate("App::Property", "Invert Sketch Start"),
             False,
             "ParametersEx2",
         )
@@ -1910,7 +1910,7 @@ class SMBendWall:
             obj,
             "App::PropertyLink",
             "Sketch",
-            translate("App::Property", "Sketch Object"),
+            FreeCAD.Qt.translate("App::Property", "Sketch Object"),
             None,
             "ParametersEx2",
         )
@@ -1918,7 +1918,7 @@ class SMBendWall:
             obj,
             "App::PropertyFloatList",
             "LengthList",
-            translate("App::Property", "Length of Wall List"),
+            FreeCAD.Qt.translate("App::Property", "Length of Wall List"),
             None,
             "ParametersEx3",
         )
@@ -1926,7 +1926,7 @@ class SMBendWall:
             obj,
             "App::PropertyFloatList",
             "bendAList",
-            translate("App::Property", "Bend Angle List"),
+            FreeCAD.Qt.translate("App::Property", "Bend Angle List"),
             None,
             "ParametersEx3",
         )

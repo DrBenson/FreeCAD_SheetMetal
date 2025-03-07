@@ -26,9 +26,11 @@
 import os
 import Part
 import FreeCAD
+from FreeCAD import Gui
 import SheetMetalTools
 
 smEpsilon = SheetMetalTools.smEpsilon
+icons_path = SheetMetalTools.icons_path
 
 # IMPORTANT: please remember to change the element map version in case of any
 # changes in modeling logic
@@ -148,9 +150,7 @@ class SMSolidBend:
 ##############################################################################################
 
 if SheetMetalTools.isGuiLoaded():
-    from FreeCAD import Gui
 
-    icons_path = SheetMetalTools.icons_path
 
     class SMBendViewProviderTree(SheetMetalTools.SMViewProvider):
         ''' Part WB style ViewProvider '''        

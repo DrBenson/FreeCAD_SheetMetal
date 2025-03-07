@@ -39,7 +39,7 @@ translate = FreeCAD.Qt.translate
 if sys.version_info.major == 3 and sys.version_info.minor < 10:
     NewUnfolderAvailable = False
     FreeCAD.Console.PrintWarning(
-        translate( "SheetMetal", 
+        FreeCAD.Qt.translate( "SheetMetal",
             "Python version is too old for the new unfolder\n"
             "Reverting to the old one\n"
         )
@@ -51,7 +51,7 @@ elif SheetMetalTools.smIsNetworkxAvailable():
 else:
     NewUnfolderAvailable = False
     FreeCAD.Console.PrintWarning(
-        translate( "SheetMetal", 
+        FreeCAD.Qt.translate( "SheetMetal",
             "Networkx dependency is missing and required for the new Unfolder\n"
             "Try uninstalling SheetMetal, refresh Addon Manager's cache, and reinstall\n"
         )
@@ -117,7 +117,7 @@ class SMUnfold:
             obj,
             "App::PropertyLinkSub",
             "baseObject",
-            translate( "App::Property", "Base Object" ),
+            FreeCAD.Qt.translate( "App::Property", "Base Object" ),
             (selobj, sel_elements),
         )
         self.addVerifyProperties(obj)
@@ -138,13 +138,13 @@ class SMUnfold:
             obj,
             "App::PropertyFloatConstraint",
             "KFactor",
-            translate( "SheetMetal", "Manual K-Factor value" ),
+            FreeCAD.Qt.translate( "SheetMetal", "Manual K-Factor value" ),
             (0.4, 0.0, 2.0, 0.01),
         )
         SheetMetalTools.smAddEnumProperty(
             obj,
             "KFactorStandard",
-            translate( "SheetMetal", "K-Factor standard" ),
+            FreeCAD.Qt.translate( "SheetMetal", "K-Factor standard" ),
             ["ansi","din"],
             "ansi",
         )
@@ -152,26 +152,26 @@ class SMUnfold:
             obj,
             "App::PropertyString",
             "MaterialSheet",
-            translate( "SheetMetal", "Material definition sheet" ),
+            FreeCAD.Qt.translate( "SheetMetal", "Material definition sheet" ),
             "_manual",
             readOnly = True
         )
         SheetMetalTools.smAddBoolProperty(
             obj,
             "ManualRecompute",
-            translate("SheetMetal", "If set, object recomputation will be done on demand only"),
+            FreeCAD.Qt.translate("SheetMetal", "If set, object recomputation will be done on demand only"),
             False,
         )
         SheetMetalTools.smAddBoolProperty(
             obj,
             "GenerateSketch",
-            translate("SheetMetal", "Generate unfold sketch"),
+            FreeCAD.Qt.translate("SheetMetal", "Generate unfold sketch"),
             False,
         )
         SheetMetalTools.smAddBoolProperty(
             obj,
             "SeparateSketchLayers",
-            translate(
+            FreeCAD.Qt.translate(
                 "SheetMetal",
                 "Generate separated unfold sketches for outline, inner lines and bend lines",
             ),
@@ -181,7 +181,7 @@ class SMUnfold:
             obj,
             "App::PropertyStringList",
             "UnfoldSketches",
-            translate("SheetMetal", "Generated sketches"),
+            FreeCAD.Qt.translate("SheetMetal", "Generated sketches"),
             None,
             "Hidden",
             attribs = 8, # Output only - no recompute if changed
@@ -210,7 +210,7 @@ class SMUnfold:
 
     def newUnfolder(self, obj):
         ''' Use new unfolder system '''
-        FreeCAD.Console.PrintMessage("Using V2 unfolding system\n")
+        FreeCAD.Console.PrintMessage(FreeCAD.Qt.translate("Logger", "Using V2 unfolding system\n"))
         if obj.MaterialSheet in ["_manual", "_none"]:
             bac = BendAllowanceCalculator.from_single_value(obj.KFactor, obj.KFactorStandard)
         else:
@@ -237,7 +237,7 @@ class SMUnfold:
 
     def oldUnfolder(self, obj):
         ''' Use old unfolder system '''
-        FreeCAD.Console.PrintMessage("Using V1 unfolding system\n")
+        FreeCAD.Console.PrintMessage(FreeCAD.Qt.translate("Logger", "Using V1 unfolding system\n"))
         kFactorTable = {1: obj.KFactor}
         if obj.MaterialSheet != "_manual" and obj.MaterialSheet != "_none":
             lookupTable = SheetMetalKfactor.KFactorLookupTable(obj.MaterialSheet)
@@ -256,8 +256,8 @@ class SMUnfold:
                 obj.UnfoldSketches,
                 obj.SeparateSketchLayers, 
                 obj.Proxy.SketchColor,
-                bendSketchColor=obj.Proxy.InternalColor,
-                internalSketchColor=obj.Proxy.BendLineColor,
+                bendSketchColor=obj.Proxy.BendLineColor,
+                internalSketchColor=obj.Proxy.InternalColor,
             )
         return shape, sketches
 
@@ -374,11 +374,11 @@ if SheetMetalTools.isGuiLoaded():
 
         def checkKFactorValid(self):
             if self.obj.MaterialSheet == "_none":
-                msg = translate(
+                msg = FreeCAD.Qt.translate(
                     "Logger", "Unfold operation needs to know K-factor value(s) to be used."
                 )
                 SMLogger.warning(msg)
-                msg += translate(
+                msg += FreeCAD.Qt.translate(
                     "QMessageBox",
                     "<ol>\n"
                     "<li>Either select 'Manual K-factor'</li>\n"
@@ -473,11 +473,11 @@ if SheetMetalTools.isGuiLoaded():
             sheetnames = SheetMetalKfactor.getSpreadSheetNames()
             self.form.availableMds.clear()
 
-            self.form.availableMds.addItem(translate("SheetMetal","Please select"))
+            self.form.availableMds.addItem(FreeCAD.Qt.translate("SheetMetal","Please select"))
             for mds in sheetnames:
                 if mds.Label.startswith("material_"):
                     self.form.availableMds.addItem(mds.Label)
-            self.form.availableMds.addItem(translate("SheetMetal", "Manual K-Factor"))
+            self.form.availableMds.addItem(FreeCAD.Qt.translate("SheetMetal", "Manual K-Factor"))
 
             selMdsIndex = self._getLastSelectedMdsIndex()
             if selMdsIndex > 0:
@@ -535,9 +535,9 @@ if SheetMetalTools.isGuiLoaded():
                 "Pixmap": os.path.join(
                     iconPath, "SheetMetal_Unfold.svg"
                 ),  # the name of a svg file available in the resources
-                "MenuText": translate("SheetMetal", "Unfold"),
+                "MenuText": FreeCAD.Qt.translate("SheetMetal", "Unfold"),
                 "Accel": "U",
-                "ToolTip": translate(
+                "ToolTip": FreeCAD.Qt.translate(
                     "SheetMetal",
                     "Flatten folded sheet metal object.\n"
                     "1. Select flat face on sheetmetal shape.\n"
@@ -579,9 +579,9 @@ if SheetMetalTools.isGuiLoaded():
                 "Pixmap": os.path.join(
                     iconPath, "SheetMetal_UnfoldUpdate.svg"
                 ),  # the name of a svg file available in the resources
-                "MenuText": translate("SheetMetal", "Unfold Update"),
+                "MenuText": FreeCAD.Qt.translate("SheetMetal", "Unfold Update"),
                 "Accel": "UU",
-                "ToolTip": translate(
+                "ToolTip": FreeCAD.Qt.translate(
                     "SheetMetal",
                     "Update all unfold objects.\n"
                 ),
@@ -607,9 +607,9 @@ if SheetMetalTools.isGuiLoaded():
                 "Pixmap": os.path.join(
                     iconPath, "SheetMetal_UnfoldUnattended.svg"
                 ),  # the name of a svg file available in the resources
-                "MenuText": translate("SheetMetal", "Unattended Unfold"),
+                "MenuText": FreeCAD.Qt.translate("SheetMetal", "Unattended Unfold"),
                 "Accel": "U",
-                "ToolTip": translate(
+                "ToolTip": FreeCAD.Qt.translate(
                     "SheetMetal",
                     "Flatten folded sheet metal object with default options\n"
                     "1. Select flat face on sheetmetal shape.\n"

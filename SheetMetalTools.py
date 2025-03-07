@@ -42,9 +42,9 @@ params = FreeCAD.ParamGet("User parameter:BaseApp/Preferences/Mod/SheetMetal")
 smEpsilon = FreeCAD.Base.Precision.approximation()
 smForceRecompute = False
 smObjectsToRecompute = set()
-translatedPreviewText = translate("SheetMetalTools", "Preview")
-cancelText = translate("SheetMetalTools", "Cancel...")
-clearText = translate("SheetMetalTools", "Clear...")
+translatedPreviewText = FreeCAD.Qt.translate("SheetMetalTools", "Preview")
+cancelText = FreeCAD.Qt.translate("SheetMetalTools", "Cancel...")
+clearText = FreeCAD.Qt.translate("SheetMetalTools", "Clear...")
 
 class SMException(Exception):
     ''' Sheet Metal Custom Exception '''
@@ -52,7 +52,7 @@ class SMException(Exception):
 def isGuiLoaded():
     if hasattr(FreeCAD, "GuiUp"):
         return FreeCAD.GuiUp
-    return False
+    return  FreeCAD.GuiUp   # False
     
 if isGuiLoaded():
     from PySide import QtCore, QtGui
@@ -164,14 +164,14 @@ if isGuiLoaded():
                 selobj = selobj.LinkedObject
             
             if self.ConstrainToObject is not None and not selobj is self.ConstrainToObject:
-                smWarnDialog(translate("SheetMetalTools",
+                smWarnDialog(FreeCAD.Qt.translate("SheetMetalTools",
                     "Features are selected from a wrong object\n"
                     "Please select features from '{}' object"
                 ).format(self.ConstrainToObject.Label))
                 return (None, None)
 
             if not self.matchAllowedType(selobj, selSubNames, self.allowedTypes):
-                smWarnDialog(translate("SheetMetalTools",
+                smWarnDialog(FreeCAD.Qt.translate("SheetMetalTools",
                     "Non valid element type selected\n"
                     "Valid element types: {}"
                 ).format(self.getAlowedTypesString(self.allowedTypes)))
@@ -549,7 +549,7 @@ if isGuiLoaded():
         if useDialog:
             filePath, _ = QtGui.QFileDialog.getSaveFileName(
                 Gui.getMainWindow(),
-                translate("SheetMetal","Export unfold sketch"),
+                FreeCAD.Qt.translate("SheetMetal","Export unfold sketch"),
                 fileName,                       # Default file path
                 f"Vector Files (*.{fileType})"  # File type filters
             )
@@ -724,7 +724,7 @@ def smIsOperationLegal(body, selobj):
     # FreeCAD.Console.PrintLog(str(selobj) + " " + str(body) + " " + str(smBelongToBody(selobj, body)) + "\n")
     if smIsPartDesign(selobj) and not smBelongToBody(selobj, body):
         smWarnDialog(
-            translate(
+            FreeCAD.Qt.translate(
             "QMessageBox",
             "The selected geometry does not belong to the active Body.\n"
             "Please make the container of this item active by\n"
