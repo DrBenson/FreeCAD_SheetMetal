@@ -222,7 +222,7 @@ class SMUnfold:
 
     def newUnfolder(self, obj, baseObject, baseFace):
         ''' Use new unfolder system '''
-        FreeCAD.Console.PrintMessage("Using V2 unfolding system\n")
+        FreeCAD.Console.PrintMessage(FreeCAD.Qt.translate("Logger", "Using V2 unfolding system\n"))
         if obj.MaterialSheet in ["_manual", "_none"]:
             bac = BendAllowanceCalculator.from_single_value(obj.KFactor, obj.KFactorStandard)
         else:
@@ -249,7 +249,7 @@ class SMUnfold:
 
     def oldUnfolder(self, obj, baseObject, baseFace):
         ''' Use old unfolder system '''
-        FreeCAD.Console.PrintMessage("Using V1 unfolding system\n")
+        FreeCAD.Console.PrintMessage(FreeCAD.Qt.translate("Logger", "Using V1 unfolding system\n"))
         kFactorTable = {1: obj.KFactor}
         if obj.MaterialSheet != "_manual" and obj.MaterialSheet != "_none":
             lookupTable = SheetMetalKfactor.KFactorLookupTable(obj.MaterialSheet)

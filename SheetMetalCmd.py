@@ -1970,7 +1970,7 @@ class SMBendWall:
             obj,
             "App::PropertyLinkSub",
             "OffsetFaceReference",
-            "Face reference for offset",
+            FreeCAD.Qt.translate("App::Property", "Face reference for offset"),
             refAngOffset,
             "ParametersEx"
         )
@@ -1979,19 +1979,19 @@ class SMBendWall:
             obj,
             "App::PropertyLinkSub",
             "AngleFaceReference",
-            "Face reference for angle",
+            FreeCAD.Qt.translate("App::Property", "Face reference for angle"),
             refAngOffset,
             "ParametersEx"
         )
 
         SheetMetalTools.smAddAngleProperty(
-            obj, "RelativeAngleToRef", "Relative angle to the face reference", 0.0, "ParametersEx"
+            obj, "RelativeAngleToRef", FreeCAD.Qt.translate("App::Property", "Relative angle to the face reference"), 0.0, "ParametersEx"
         )
 
         SheetMetalTools.smAddEnumProperty(
             obj,
             "OffsetType",
-            "Offset Type",
+            FreeCAD.Qt.translate("App::Property", "Offset Type"),
             ["Material Outside", "Material Inside", "Thickness Outside", "Offset"],
             "Material Inside",
             "ParametersEx"
@@ -2000,7 +2000,7 @@ class SMBendWall:
         SheetMetalTools.smAddDistanceProperty(
             obj,
             "OffsetTypeOffset",
-            "Works when offset face reference is on. It offsets by a normal distance from the offsets reference face.",
+            FreeCAD.Qt.translate("App::Property", "Works when offset face reference is on. It offsets by a normal distance from the offsets reference face."),
             0.0,
             "ParametersEx",
         )
@@ -2008,7 +2008,7 @@ class SMBendWall:
         SheetMetalTools.smAddBoolProperty(
             obj,
             "SupplAngleRef",
-            "Supplementary angle reference",
+            FreeCAD.Qt.translate("App::Property", "Supplementary angle reference"),
             False,
             "ParametersEx"
         )

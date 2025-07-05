@@ -387,6 +387,9 @@ if SheetMetalTools.isGuiLoaded():
             return os.path.join( icons_path , 'SheetMetal_AddBaseShape.svg')
 
         def setEdit(self, vobj, mode):
+            SMLogger.log(
+                FreeCAD.Qt.translate("Logger", "Base shape edit mode: ") + str(mode)
+            )
             if mode != 0:
                 return None
             taskd = BaseShapeTaskPanel(vobj.Object)
