@@ -61,7 +61,7 @@
         <translation>基礎物體</translation>
     </message>
     <message>
-        <source>origil Loc</source>
+        <source>origin Loc</source>
         <translation>原點位置</translation>
     </message>
     <message>
