@@ -147,10 +147,10 @@ class ExtrudedCutout:
             normal_vector = selected_face.normalAt(0, 0)
 
             # Lengths.
-            if fp.CutType == "Two dimensions":
+            if (fp.CutType == "Two dimensions") or (fp.CutType == FreeCAD.Qt.translate("SheetMetal", "Two dimensions")):
                 ExtLength1 = fp.ExtrusionLength1.Value
                 ExtLength2 = fp.ExtrusionLength2.Value
-            elif fp.CutType == "Symmetric":
+            elif (fp.CutType == "Symmetric") or (fp.CutType == FreeCAD.Qt.translate("SheetMetal", "Symmetric")):
                 ExtLength1 = fp.ExtrusionLength1.Value / 2
                 ExtLength2 = fp.ExtrusionLength1.Value / 2
             else:
@@ -159,10 +159,10 @@ class ExtrudedCutout:
                 distance = skCenter - objCenter
                 TotalLength = selected_object.Shape.BoundBox.DiagonalLength + distance.Length
 
-                if fp.CutType == "Through everything both sides":
+                if (fp.CutType == "Through everything both sides") or (fp.CutType == FreeCAD.Qt.translate("SheetMetal", "Through everything both sides")):
                     ExtLength1 = TotalLength
                     ExtLength2 = TotalLength
-                elif fp.CutType == "Through everything side 1":
+                elif (fp.CutType == "Through everything side 1") or (fp.CutType == FreeCAD.Qt.translate("SheetMetal", "Through everything side 1")):
                     ExtLength1 = TotalLength
                     ExtLength2 = -TotalLength
                 else:
@@ -329,12 +329,12 @@ class ExtrudedCutout:
                 #
                 # Check the "CutSide" property to decide how to perform
                 # the cut.
-                if fp.CutSide == "Inside":
+                if (fp.CutSide == "Inside") or (fp.CutSide == FreeCAD.Qt.translate("SheetMetal", "Inside")):
                     if fp.Refine:
                         cut_result = selected_object.Shape.cut(combined_offset).removeSplitter()
                     else:
                         cut_result = selected_object.Shape.cut(combined_offset)
-                elif fp.CutSide == "Outside":
+                elif (fp.CutSide == "Outside") or (fp.CutSide == FreeCAD.Qt.translate("SheetMetal", "Outside")):
                     if fp.Refine:
                         cut_result = selected_object.Shape.common(combined_offset).removeSplitter()
                     else:
@@ -433,7 +433,7 @@ if SheetMetalTools.isGuiLoaded():
             SheetMetalTools.taskConnectCheck(obj, self.form.checkRefine, "Refine")
 
         def updateDisplay(self):
-            if self.obj.CutSide == "Inside":
+            if (self.obj.CutSide == "Inside") or (self.obj.CutSide == FreeCAD.Qt.translate("SheetMetal", "Inside")):
                 self.form.radioInside.setChecked(True)
             else:
                 self.form.radioOutside.setChecked(True)
@@ -442,17 +442,17 @@ if SheetMetalTools.isGuiLoaded():
         def cutSideChanged(self, button, checked):
             if not checked:
                 return
-            self.obj.CutSide = "Inside" if button == self.form.radioInside else "Outside"
+            self.obj.CutSide = FreeCAD.Qt.translate("SheetMetal", "Inside") if button == self.form.radioInside else FreeCAD.Qt.translate("SheetMetal", "Outside")
             self.obj.Document.recompute()
 
         def improveChanged(self, isImprove):
             self.form.frameImproveLevel.setVisible(isImprove)
 
         def updateWidgetsVisibility(self):
-            self.form.frameSideA.setVisible(self.obj.CutType in ["Two dimensions", "Symmetric"])
-            self.form.frameSideB.setVisible(self.obj.CutType == "Two dimensions")
+            self.form.frameSideA.setVisible(self.obj.CutType in [FreeCAD.Qt.translate("SheetMetal", "Two dimensions"), FreeCAD.Qt.translate("SheetMetal", "Symmetric")])
+            self.form.frameSideB.setVisible(self.obj.CutType == FreeCAD.Qt.translate("SheetMetal", "Two dimensions"))
             self.form.labelSideA.setText(
-                self.LengthText if self.obj.CutType == "Symmetric" else self.LengthAText)
+                self.LengthText if (self.obj.CutType == "Symmetric") or (self.obj.CutType == FreeCAD.Qt.translate("SheetMetal", "Symmetric")) else self.LengthAText)
 
         def cutTypeChanged(self, value):
             self.updateWidgetsVisibility()
