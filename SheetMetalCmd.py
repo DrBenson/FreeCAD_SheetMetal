@@ -1827,35 +1827,35 @@ class SMBendWall:
         SheetMetalTools.smAddProperty(obj,
                 "App::PropertyLinkSub",
                 "OffsetFaceReference",
-                "Face reference for offset",
+                FreeCAD.Qt.translate("App::Property", "Face reference for offset"),
                 refAngOffset,
                 "ParametersEx")
         SheetMetalTools.smAddProperty(obj,
                 "App::PropertyLinkSub",
                 "AngleFaceReference",
-                "Face reference for angle",
+                FreeCAD.Qt.translate("App::Property", "Face reference for angle"),
                 refAngOffset,
                 "ParametersEx")
         SheetMetalTools.smAddAngleProperty(obj,
                 "RelativeAngleToRef",
-                "Relative angle to the face reference",
+                FreeCAD.Qt.translate("App::Property", "Relative angle to the face reference"),
                 0.0,
                 "ParametersEx")
         SheetMetalTools.smAddEnumProperty(obj,
                 "OffsetType",
-                "Offset Type",
-                ["Material Outside", "Material Inside", "Thickness Outside", "Offset"],
-                "Material Inside",
+                FreeCAD.Qt.translate("App::Property", "Offset Type"),
+                [FreeCAD.Qt.translate("App::Property", "Material Outside"), FreeCAD.Qt.translate("App::Property", "Material Inside"), FreeCAD.Qt.translate("App::Property", "Thickness Outside"), FreeCAD.Qt.translate("App::Property", "Offset")],
+                FreeCAD.Qt.translate("App::Property", "Material Inside"),
                 "ParametersEx")
         SheetMetalTools.smAddDistanceProperty(obj,
                 "OffsetTypeOffset",
-                "Works when offset face reference is on. It offsets by "
-                "a normal distance from the offsets reference face.",
+                FreeCAD.Qt.translate("App::Property", "Works when offset face reference is on. It offsets by "
+                "a normal distance from the offsets reference face."),
                 0.0,
                 "ParametersEx")
         SheetMetalTools.smAddBoolProperty(obj,
                 "SupplAngleRef",
-                "Supplementary angle reference",
+                FreeCAD.Qt.translate("App::Property", "Supplementary angle reference"),
                 False,
                 "ParametersEx")
 
@@ -1978,17 +1978,17 @@ class SMBendWall:
             halfSuplAngle = math.radians((180-angleParFace) / 2)
 
             # Calculate the distance for the wall to be inside.
-            if fp.OffsetType == "Material Inside":
+            if (fp.OffsetType == "Material Inside") or (fp.OffsetType == FreeCAD.Qt.translate("App::Property", "Material Inside")):
                 distWall = (((fp.radius.Value + thk) * math.sqrt(2 - 2 * math.cos(radAngle)))/2)/math.sin(halfSuplAngle)
 
             # Calculate the distance for the wall (and bend radius) to
             # be outside.
-            if fp.OffsetType == "Material Outside":
+            if (fp.OffsetType == "Material Outside") or (fp.OffsetType == FreeCAD.Qt.translate("App::Property","Material Outside")) :
                 distWall = 0.0
 
             # Calculate the distance for the wall to be one thickness
             # outside.
-            if fp.OffsetType == "Thickness Outside":
+            if (fp.OffsetType == "Thickness Outside") or (fp.OffsetType == FreeCAD.Qt.translate("App::Property","Thickness Outside")) :
                 # Get radians of the complementary angle.
                 wallThkAngle = math.radians(90 - angleParFace)
 
@@ -1997,14 +1997,14 @@ class SMBendWall:
 
             # Calculate the distance for the wall to be normally
             # distanced from the reference face.
-            if fp.OffsetType == "Offset":
+            if fp.OffsetType == "Offset" or (fp.OffsetType == FreeCAD.Qt.translate("App::Property", "Offset")) :
                 # Get radians of the complementary angle.
                 wallThkAngle = math.radians(90 - angleParFace)
 
                 distOffsetOut = (thk+fp.OffsetTypeOffset.Value) / math.cos(wallThkAngle)
                 distWall = (((fp.radius.Value + thk) * math.sqrt(2 - 2 * math.cos(radAngle)))/2)/math.sin(halfSuplAngle) - distOffsetOut
 
-            if fp.invert and fp.OffsetType != "Material Outside":
+            if (fp.invert and fp.OffsetType != "Material Outside") or (fp.invert and fp.OffsetType != FreeCAD.Qt.translate("App::Property", "Material Outside")):
                 # Get radians of the complementary angle.
                 complAngle = math.radians(90 - angleParFace)
 
@@ -2171,7 +2171,7 @@ if SheetMetalTools.isGuiLoaded():
             return True
 
         def bendTypeUpdated(self, value):
-            if self.obj.BendType == "Offset":
+            if (self.obj.BendType == "Offset") or (self.obj.BendType == FreeCAD.Qt.translate("App::Property", "Offset")):
                 self.form.Offset.setEnabled(True)
             else:
                 self.form.Offset.setEnabled(False)

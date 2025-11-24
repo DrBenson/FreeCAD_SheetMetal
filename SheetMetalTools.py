@@ -1102,6 +1102,16 @@ def smAddEnumProperty(obj, name, proptip, enumlist, defval=None, paramgroup="Par
         if defval is not None:
             setattr(obj, name, defval)
 
+
+def smGetBodyOfItem(obj):
+    if hasattr(obj, "getParent"):
+        return obj.getParent()
+    elif hasattr(obj, "getParents"):  # Probably FreeCadLink version.
+        parent, _ = obj.getParents()[0]
+        return parent
+    return None
+
+
 def smGetThickness(obj, foldface):
     normal = foldface.normalAt(0, 0)
     theVol = obj.Volume

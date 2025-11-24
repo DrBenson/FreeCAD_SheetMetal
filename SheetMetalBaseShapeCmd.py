@@ -415,6 +415,9 @@ if SheetMetalTools.isGuiLoaded():
         """Open Base shape task."""
 
         def GetResources(self):
+            # Add translations path.
+            Gui.addLanguagePath(language_path)
+            Gui.updateLocale()
             return {
                     # The name of a svg file available in the resources.
                     "Pixmap": os.path.join(icons_path, "SheetMetal_AddBaseShape.svg"),

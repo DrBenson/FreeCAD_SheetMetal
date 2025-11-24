@@ -232,7 +232,7 @@ def smExtrude(extLength=10.0, gap1=0.0, gap2=0.0, reversed=False, subtraction=Fa
                 thkDir *= -1
             wallSolid = Wall_face.extrude(thkDir * thk)
             if (wallSolid.Volume - smEpsilon) < 0.0:
-                raise SheetMetalTools.SMException("Incorrect face selected. Please select a side face.")
+                raise SheetMetalTools.SMException(FreeCAD.Qt.translate("SheetMetal", "Incorrect face selected. Please select a side face."))
             # Part.show(wallSolid, "wallSolid")
             extendsolid = wallSolid
             # To find Overlapping Solid, non thickness side Face that

@@ -157,6 +157,10 @@ if SheetMetalTools.isGuiLoaded():
     Gui = FreeCAD.Gui
     icons_path = SheetMetalTools.icons_path
 
+    # Add translations path.
+    Gui.addLanguagePath(SheetMetalTools.language_path)
+    Gui.updateLocale()
+
 
     class SMReliefViewProviderTree(SheetMetalTools.SMViewProvider):
         """Part WB style ViewProvider."""
