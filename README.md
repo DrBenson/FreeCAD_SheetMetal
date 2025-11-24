@@ -1,6 +1,9 @@
 # FreeCAD SheetMetal Workbench
 
 A simple sheet metal tools workbench for FreeCAD
+Current version 0.7.58
+
+This workbench is based on the original [SheetMetal](https://github.com/shaise/FreeCAD_SheetMetal) workbench and can be installed alongside it.
 
 ![Demo Workflow](Resources/SheetMetal4.gif)
 
